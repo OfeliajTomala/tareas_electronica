@@ -1,0 +1,74 @@
+/* Estilo general del cuerpo */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('Fondopaginaweb\ .jpg'); /* o reemplaza por tu imagen local */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Contenedor central */
+.contenedor {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); /* fondo oscuro transparente */
+  padding: 40px 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #00ffff, #00c9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sección de botones */
+.botones {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Botones grandes y llamativos */
+.btn {
+  text-decoration: none;
+  background: linear-gradient(to right, #6a11cb, #00c9ff);
+  padding: 15px 30px;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #00c9ff, #6a11cb);
+}
+
+/*Pagina compuertas*/
+body.pagina-compuertas {
+  background-color: black;
+  color: white;
+  /* más estilos */
+}
+
+body.pagina-compuertas .contenedor {
+  background-color: rgba(0,0,0,0.7);
+  max-width: 900px;
+  padding: 40px;
+  margin: auto;
+}

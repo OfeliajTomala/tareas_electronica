@@ -1,157 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tareas Electrónica</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
-<h1>COMPUERTAS LÓGICAS</h1>
-   
-<h2>Análisis y Simulación de Compuertas Lógicas Básicas (AND, OR y NOT)</h2>
-
- <h3>OBJETIVOS</h3>
-<strong>Objetivo General:</strong>
-<br>
-•Analizar el comportamiento de las compuertas lógicas básicas mediante su construcción y simulación.<br>
-<br>
-<strong>Objetivos Específicos:</strong> 
-<br>
-• Identificar las diferentes compuertas lógicas y sus símbolos.<br>
-• Construir circuitos lógicos básicos utilizando compuertas. <br>
-• Verificar las tablas de verdad mediante simulación y práctica.<br>
-
-<h3>TEÓRICO</h3> 
-
-<h4>•Compuerta AND</h4>
-La salida es 1 (verdadera) solo si todas las entradas son 1. Si una de las entradas es 0 la salida es 0. <br>
-<br>
-<table border="1">
-    <tr>
-        <th>Entrada A</th>
-        <th>Entrada B</th>
-        <th>Salida<th>
-    </tr>        
-    <tr>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>0</td>
-        <td>1</td>
-        <td>0</td>
-    </tr> 
-    <tr>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-    </tr>          
-</table>
-
-<h4>•Compuerta OR</h4> 
-La salida es 1 (verdadera) si al menos una entrada es 1. Si todas las entradas son 0 la salida es 0. <br>
-<br>
-<table border="1">
-    <tr>
-        <th>Entrada A</th>
-        <th>Entrada B</th>
-        <th>Salida<th>
-    </tr>        
-    <tr>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>0</td>
-        <td>1</td>
-        <td>1</td>
-    </tr> 
-    <tr>
-        <td>1</td>
-        <td>0</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-    </tr>          
-</table>
-
-<h4>•Compuerta NOT</h4>
-Invierte la entrada. Si la entrada es 1, la salida es 0; y si es 0, la salida es 1. <br>
-<br>
-<table border="1">
-    <tr>
-        <th>Entrada</th>
-        <th>Salida<th>
-    </tr>        
-    <tr>
-        <td>0</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>0</td>
-    </tr>               
-</table>
-<br>
-
-<h3>MATERIALES Y EQUIPOS</h3>
-• Computadora con acceso a Tinkercad Circuits (para simulación)
-• Fuente de alimentación <br>
-• Protoboard <br>
-• Cables de conexión <br>
-• LEDs <br>
-• Resistencias <br>
-• Interruptores (Para simular entradas A y B) <br>
-• Chips lógicos (74LS08 = AND, 74LS32 = OR, 74LS04 = NOT) <br>
-• Multímetro (opcional) <br>
-<br>
-<h3>PROCEDIMIENTO:</h3> 
-1.	Conectar la compuerta lógica en el protoboard según el circuito.
-2.	Alimentar adecuadamente el chip.
-3.	Probar las diferentes combinaciones de entradas y observar la salida.
-4.	Registrar resultados.
-5.	(Opcional) Simular los mismos circuitos en software.
-
- TABLA DE RESULTADOS
-Entrada A	Entrada B	Salida esperada	Salida real	Observaciones
-0	0	0	0	Funciona OK
-0	1	1	1	Funciona OK
-1	0	1	1	Funciona OK
-1	1	1	1	Funciona OK
-(Repite según compuerta lógica usada)
-
- ANÁLISIS Y DISCUSIÓN
-•	¿Coincidieron los resultados reales con los esperados?
-•	¿Qué errores se presentaron?
-•	¿Qué sucede si no se conecta correctamente la alimentación del chip?
-•	¿Cómo se interpreta una salida incorrecta?
-
- CONCLUSIONES
-•	Las compuertas lógicas básicas pueden implementarse fácilmente con componentes TTL.
-•	El comportamiento real coincide con las tablas de verdad estudiadas.
-•	La simulación ayuda a verificar antes de construir.
-
-ANEXOS
-•	Fotos del montaje físico.
-•	Capturas de pantalla del simulador.
-•	Tablas de verdad completas.
-•	Esquemas de conexión.
-
-
-
-
-
-
+  <div class="contenedor">
+    <h1>Deberes Electrónica</h1>
+    <div class="botones">
+      <a href="Compuertaslogicas.html" class="btn">COMPUERTAS LÓGICAS</a>
+      <a href="tema2.html" class="btn">CIRCUITO EN SERIE Y PARALELO</a>
+      <a href="tema3.html" class="btn">SISTEMA DECIMAL,BINARIO,OCTAL, HEXADECIMAL</a>
+      <a href="Actividad1Tinkercad.html" class="btn">ACTIVIDAD TINKERCAD ARDUINOS</a>
+    </div>
+  </div>
 </body>
 </html>

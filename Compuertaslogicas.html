@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Compuertas Lógicas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Estilos para tablas dentro del contenedor */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      th {
+        background: linear-gradient(to right, #00ffff, #00c9ff);
+        color: #000;
+      }
+      h2, h3, h4, h5 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+      }
+      strong {
+        color: #00c9ff;
+      }
+      /* Para listas */
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        text-align: left;
+      }
+      ol {
+        list-style-type: decimal;
+        padding-left: 20px;
+        text-align: left;
+      }
+    </style>
+</head>
+<body class="pagina-compuertas">
+    
+
+<div class="contenedor">
+
+  <h1>COMPUERTAS LÓGICAS</h1>
+
+  <h2>Análisis y Simulación de Compuertas Lógicas Básicas (AND, OR y NOT)</h2>
+
+  <h3>OBJETIVOS</h3>
+  <p><strong>Objetivo General:</strong><br>
+  Analizar el comportamiento de las compuertas lógicas básicas mediante su construcción y simulación.</p>
+
+  <p><strong>Objetivos Específicos:</strong></p>
+  <ul>
+    <li>Identificar las diferentes compuertas lógicas y sus símbolos.</li>
+    <li>Construir circuitos lógicos básicos utilizando compuertas.</li>
+    <li>Verificar las tablas de verdad mediante simulación y práctica.</li>
+  </ul>
+
+  <h3>CONCEPTOS</h3>
+
+  <h4>Compuerta AND</h4>
+  <p>La salida es 1 (verdadera) solo si todas las entradas son 1. Si una de las entradas es 0 la salida es 0.</p>
+  <img src="compuerta-logica-and.jpg" alt="Compuerta AND" style="max-width:100%; height:auto;" />
+  <h5>Tabla de verdad</h5>
+  <table>
+    <tr>
+      <th>Entrada A</th>
+      <th>Entrada B</th>
+      <th>Salida</th>
+    </tr>
+    <tr><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td>0</td><td>1</td><td>0</td></tr>
+    <tr><td>1</td><td>0</td><td>0</td></tr>
+    <tr><td>1</td><td>1</td><td>1</td></tr>
+  </table>
+
+  <h4>Compuerta OR</h4>
+  <p>La salida es 1 (verdadera) si al menos una entrada es 1. Si todas las entradas son 0 la salida es 0.</p>
+  <img src="compuerta-logica-or.jpg" alt="Compuerta OR" style="max-width:100%; height:auto;" />
+  <h5>Tabla de verdad</h5>
+  <table>
+    <tr>
+      <th>Entrada A</th>
+      <th>Entrada B</th>
+      <th>Salida</th>
+    </tr>
+    <tr><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td>0</td><td>1</td><td>1</td></tr>
+    <tr><td>1</td><td>0</td><td>1</td></tr>
+    <tr><td>1</td><td>1</td><td>1</td></tr>
+  </table>
+
+  <h4>Compuerta NOT</h4>
+  <p>Invierte la entrada. Si la entrada es 1, la salida es 0; y si es 0, la salida es 1.</p>
+  <img src="compuerta-logica-not.jpg" alt="Compuerta NOT" style="max-width:100%; height:auto;" />
+  <h5>Tabla de verdad</h5>
+  <table>
+    <tr>
+      <th>Entrada</th>
+      <th>Salida</th>
+    </tr>
+    <tr><td>0</td><td>1</td></tr>
+    <tr><td>1</td><td>0</td></tr>
+  </table>
+
+  <h3>MATERIALES Y EQUIPOS</h3>
+  <ul>
+    <li>Computadora con acceso a Tinkercad Circuits (para simulación)</li>
+    <li>Fuente de alimentación</li>
+    <li>Protoboard</li>
+    <li>Cables de conexión</li>
+    <li>LEDs</li>
+    <li>Resistencias</li>
+    <li>Interruptores (Para simular entradas A y B)</li>
+    <li>Chips lógicos (74LS08 = AND, 74LS32 = OR, 74LS04 = NOT)</li>
+    <li>Multímetro (opcional)</li>
+  </ul>
+
+  <h3>PROCEDIMIENTO:</h3>
+  <ol>
+    <li>Conectar la compuerta lógica en el protoboard según el circuito.</li>
+    <li>Alimentar adecuadamente el chip.</li>
+    <li>Probar las diferentes combinaciones de entradas y observar la salida.</li>
+    <li>Registrar resultados.</li>
+    <li>(Opcional) Simular los mismos circuitos en software.</li>
+  </ol>
+
+  <h3>TABLA DE RESULTADOS</h3>
+  <table>
+    <tr>
+      <th>Entrada A</th>
+      <th>Entrada B</th>
+      <th>Salida esperada</th>
+      <th>Salida real</th>
+      <th>Observaciones</th>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Funciona OK</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Funciona OK</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Funciona OK</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Funciona OK</td>
+    </tr>
+  </table>
+
+  <h3>ANÁLISIS Y DISCUSIÓN</h3>
+  <ul>
+    <li>¿Coincidieron los resultados reales con los esperados?</li>
+    <li>¿Qué errores se presentaron?</li>
+    <li>¿Qué sucede si no se conecta correctamente la alimentación del chip?</li>
+    <li>¿Cómo se interpreta una salida incorrecta?</li>
+  </ul>
+
+  <h3>CONCLUSIONES</h3>
+  <ul>
+    <li>Las compuertas lógicas básicas pueden implementarse fácilmente con componentes TTL.</li>
+    <li>El comportamiento real coincide con las tablas de verdad estudiadas.</li>
+    <li>La simulación ayuda a verificar antes de construir.</li>
+  </ul>
+
+  <h3>ANEXOS</h3>
+  <ul>
+    <li>Fotos del montaje físico.</li>
+    <li>Capturas de pantalla del simulador.</li>
+    <li>Tablas de verdad completas.</li>
+    <li>Esquemas de conexión.</li>
+  </ul>
+
+</div>
+
+</body>
+</html>
