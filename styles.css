@@ -72,3 +72,17 @@ body.pagina-compuertas .contenedor {
   padding: 40px;
   margin: auto;
 }
+
+/*Pagina actividad tinkercad*/
+body.actividadtikercad {
+  background-color: black;
+  color: white;
+  /* más estilos */
+}
+
+body.actividadtikercad .contenedor {
+  background-color: rgba(0,0,0,0.7);
+  max-width: 900px;
+  padding: 40px;
+  margin: auto;
+}
