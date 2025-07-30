@@ -59,6 +59,8 @@ h1 {
   background: linear-gradient(to right, #00c9ff, #6a11cb);
 }
 
+
+
 /*Pagina compuertas*/
 body.pagina-compuertas {
   background-color: black;
@@ -72,6 +74,21 @@ body.pagina-compuertas .contenedor {
   padding: 40px;
   margin: auto;
 }
+
+/*Pagina Circuito en serie y en paralelo*/
+body.circuitoenserieyparalelo {
+  background-color: black;
+  color: white;
+  /* más estilos */
+}
+
+body.circuitoenserieyparalelo .contenedor {
+  background-color: rgba(0,0,0,0.7);
+  max-width: 900px;
+  padding: 40px;
+  margin: auto;
+}
+
 
 /*Pagina actividad tinkercad*/
 body.actividadtikercad {
