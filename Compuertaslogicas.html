@@ -22,7 +22,15 @@
         background: linear-gradient(to right, #00ffff, #00c9ff);
         color: #000;
       }
-      h2, h3, h4, h5 {
+      h4 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        background: linear-gradient(to right, #00ffff, #00c9ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      h2, h3, h5 {
         margin-top: 1em;
         margin-bottom: 0.5em;
       }
@@ -64,6 +72,7 @@
 
   <h3>CONCEPTOS</h3>
 
+  <div class="contenedor2">
   <h4>Compuerta AND</h4>
   <p>La salida es 1 (verdadera) solo si todas las entradas son 1. Si una de las entradas es 0 la salida es 0.</p>
   <img src="compuerta-logica-and.jpg" alt="Compuerta AND" style="max-width:100%; height:auto;" />
@@ -79,6 +88,7 @@
     <tr><td>1</td><td>0</td><td>0</td></tr>
     <tr><td>1</td><td>1</td><td>1</td></tr>
   </table>
+  </div>
 
   <h4>Compuerta OR</h4>
   <p>La salida es 1 (verdadera) si al menos una entrada es 1. Si todas las entradas son 0 la salida es 0.</p>
