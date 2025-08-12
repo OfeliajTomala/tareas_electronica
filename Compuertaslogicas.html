@@ -90,6 +90,9 @@
   </table>
   </div>
 
+  <br></br>
+
+  <div class="contenedor2">
   <h4>Compuerta OR</h4>
   <p>La salida es 1 (verdadera) si al menos una entrada es 1. Si todas las entradas son 0 la salida es 0.</p>
   <img src="compuerta-logica-or.jpg" alt="Compuerta OR" style="max-width:100%; height:auto;" />
@@ -105,7 +108,11 @@
     <tr><td>1</td><td>0</td><td>1</td></tr>
     <tr><td>1</td><td>1</td><td>1</td></tr>
   </table>
+  </div>
 
+  <br></br>
+
+  <div class="contenedor2">
   <h4>Compuerta NOT</h4>
   <p>Invierte la entrada. Si la entrada es 1, la salida es 0; y si es 0, la salida es 1.</p>
   <img src="compuerta-logica-not.jpg" alt="Compuerta NOT" style="max-width:100%; height:auto;" />
@@ -117,7 +124,10 @@
     </tr>
     <tr><td>0</td><td>1</td></tr>
     <tr><td>1</td><td>0</td></tr>
-  </table>
+  </table>  
+  </div>
+  
+  <br></br>
 
   <h3>MATERIALES Y EQUIPOS</h3>
   <ul>
@@ -128,23 +138,84 @@
     <li>LEDs</li>
     <li>Resistencias</li>
     <li>Interruptores (Para simular entradas A y B)</li>
-    <li>Chips lógicos (74LS08 = AND, 74LS32 = OR, 74LS04 = NOT)</li>
-    <li>Multímetro (opcional)</li>
+    <li>Chips lógicos: 
+      <ul>
+        <li>74LS08 = AND </li>
+        <li> 74LS32 = OR </li> 
+        <li>74LS04 = NOT </li>
+      </ul>
+    </li>  
   </ul>
+
+  <br>
 
   <h3>PROCEDIMIENTO:</h3>
   <ol>
-    <li>Conectar la compuerta lógica en el protoboard según el circuito.</li>
-    <li>Alimentar adecuadamente el chip.</li>
-    <li>Probar las diferentes combinaciones de entradas y observar la salida.</li>
-    <li>Registrar resultados.</li>
-    <li>(Opcional) Simular los mismos circuitos en software.</li>
+    <li>Abrir Tinkercad Circuits y crear un nuevo circuito.</li>
+    <li>Añadir un protoboard virtual y colocar el chip lógico deseado (AND, OR o NOT).</li>
+    <li>Conectar los pines de alimentación del chip (Vcc a +5V, GND a tierra).</li>
+    <li>Conectar los interruptores virtuales a las entradas del chip.</li>
+    <li>Conectar las salidas a LEDs a través de resistencias para indicar la salida.</li>
+    <li>Configurar y probar todas las combinaciones posibles de entradas:</li>
+      <ul> 
+        <li> AND y OR: 00, 01, 10, 11 </li>
+        <li>NOT: 0, 1 </li>
+     </ul>
+    <li>Observar y registrar el comportamiento de los LEDs para cada combinación.</li>
+    <li>Repetir para cada tipo de compuerta lógica. </li>
+    <li>Registrar los resultados en la tabla correspondiente. </li>
+    
   </ol>
+  
+  <br></br>
 
   <h3>Simulacion en Tinkercad Compuertas logicas</h3>
+  <br>
   <iframe width="725" height="453" src="https://www.tinkercad.com/embed/iFAhPNr8DMz?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
   
-  <h3>TABLA DE RESULTADOS</h3>
+  <br></br>
+
+  <h3>TABLA DE RESULTADOS COMPUERTA AND</h3>
+  <table>
+    <tr>
+      <th>Entrada A</th>
+      <th>Entrada B</th>
+      <th>Salida esperada</th>
+      <th>Salida real</th>
+      <th>Observaciones</th>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Funciona OK</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Funciona OK</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Funciona OK</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Funciona OK</td>
+    </tr>
+  </table>
+  <br></br>
+
+   <h3>TABLA DE RESULTADOS COMPUERTA OR</h3>
   <table>
     <tr>
       <th>Entrada A</th>
@@ -183,29 +254,61 @@
     </tr>
   </table>
 
+  <br></br>
+
+  <h3>TABLA DE RESULTADOS COMPUERTA AND</h3>
+  <table>
+    <tr>
+      <th>Entrada A</th>
+      <th>Salida esperada</th>
+      <th>Salida real</th>
+      <th>Observaciones</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Funciona OK</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Funciona OK</td>
+    </tr>
+    
+  </table>
+
   <h3>ANÁLISIS Y DISCUSIÓN</h3>
   <ul>
     <li>¿Coincidieron los resultados reales con los esperados?</li>
+     Sí coincidieron los resultados obtenidos en la simulación con las tablas de verdad teóricas de las compuertas AND, OR y NOT, el comportamiento fue el esperado en cada combinación de entradas.
+    <br></br>
     <li>¿Qué errores se presentaron?</li>
+    Tuve errores en la conexiones al principio, cablie mal un pin de entrada o salida por lo cual el circuito no funcionó como se esperaba.
+    <br></br>
     <li>¿Qué sucede si no se conecta correctamente la alimentación del chip?</li>
+    El chip no funcionará. La simulación mostrará que no hay respuesta en las salidas o que éstas permanecen en un estado fijo (0 o 1), ya que los circuitos internos no reciben energía para operar.
+    <br></br>
+    
     <li>¿Cómo se interpreta una salida incorrecta?</li>
+    Una salida incorrecta se interpreta como una señal que no coincide con el comportamiento esperado según la tabla de verdad de la compuerta lógica, por ejemplo si se espera que el led este apagado pero este se prende, eso seria una salida incorrecta.
+    <br></br>
   </ul>
 
   <h3>CONCLUSIONES</h3>
   <ul>
-    <li>Las compuertas lógicas básicas pueden implementarse fácilmente con componentes TTL.</li>
-    <li>El comportamiento real coincide con las tablas de verdad estudiadas.</li>
-    <li>La simulación ayuda a verificar antes de construir.</li>
+    <li>La simulación en Tinkercad es una herramienta confiable y práctica para entender y verificar el funcionamiento de compuertas lógicas básicas.</li>
+    <br>
+    <li>Los resultados coinciden con las tablas de verdad, confirmando el comportamiento esperado de los circuitos lógicos AND, OR y NOT.</li>
+    <br>
+    <li>La correcta conexión de alimentación y evitar entradas flotantes son fundamentales para el funcionamiento adecuado de los chips lógicos.</li>
+    <br>
+    <li>Simular circuitos antes de construir físicamente ayuda a prevenir errores y a comprender mejor el diseño y comportamiento lógico.</li>
   </ul>
 
-  <h3>ANEXOS</h3>
-  <ul>
-    <li>Fotos del montaje físico.</li>
-    <li>Capturas de pantalla del simulador.</li>
-    <li>Tablas de verdad completas.</li>
-    <li>Esquemas de conexión.</li>
-  </ul>
-<br>  
+  
+<br></br>
 <a href="Circuitoenserieyparalelo.html" class="btn">Siguiente: Circuito en serie o en paralelo</a>
 </div>
 
