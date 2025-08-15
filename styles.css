@@ -124,4 +124,11 @@ body.actividadLCDKEYPAD .contenedor {
   padding: 40px;
   margin: auto;
 }
+body.actividadLCDKEYPAD.contenedor2 {
+  background-color: rgba(28, 83, 90, 0.7);
+  max-width: 900px;
+  padding: 40px;
+  border-radius: 20px;
+  margin: auto;
+}
 
