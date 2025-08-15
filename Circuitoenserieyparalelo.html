@@ -1,24 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Circuito en serie y en paralelo</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    h2, h3, h4, h5 {
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Compuertas Lógicas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Estilos para tablas dentro del contenedor */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      th {
+        background: linear-gradient(to right, #00ffff, #00c9ff);
+        color: #000;
+      }
+      h4 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        margin-top: 2px;
+        background: linear-gradient(to right, #00ffff, #00c9ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      h2, h3, h5 {
         margin-top: 1em;
         margin-bottom: 0.5em;
-    } 
-  </style>
+      }
+      strong {
+        color: #00c9ff;
+      }
+      /* Para listas */
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        text-align: left;
+      }
+      ol {
+        list-style-type: decimal;
+        padding-left: 20px;
+        text-align: left;
+      }
+    
+      .formula {
+          background-color: rgb(33, 159, 157);
+          padding: 10px;
+          border-left: 4px solid #00f;
+          margin: 10px 0;
+          font-family: monospace;
+      }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 </head>
-<body class="circuitoenserieyparalelo">
+<body>
+<div class="contenedor">
+    <h1>Informe de la Práctica</h1>
+    <h2>Ley de Ohm y Circuitos en Serie y Paralelo</h2>
 
-  <div class="contenedor">
-    <h1>CIRCUITO EN PARALELO Y EN SERIE</h1>
-    
-    
-<br>  
+    <h3>1. Objetivo</h3>
+    <ul>
+        <li>Construir y analizar un circuito en serie y uno en paralelo.</li>
+        <li>Medir y comparar la corriente y el voltaje en cada configuración.</li>
+        <li>Comprender el comportamiento de las resistencias en cada conexión.</li>
+    </ul>
+
+    <h3>2. Conceptos</h3>
+    <p><b>Ley de Ohm:</b> Relaciona el voltaje \(V\), la corriente \(I\) y la resistencia \(R\) mediante la fórmula:</p>
+    <div class="formula">
+        \( V = I \cdot R \)
+    </div>
+    <p>
+        Donde:<br>
+        \(V\) = Voltaje en voltios (V)<br>
+        \(I\) = Corriente en amperios (A)<br>
+        \(R\) = Resistencia en ohmios (Ω)
+    </p>
+
+    <h4>Circuito en Serie</h4>
+    <ul>
+        <li>La corriente es la misma en todos los elementos.</li>
+        <li>El voltaje total es la suma de las caídas de tensión:</li>
+    </ul>
+    <div class="formula">
+        \( V_{total} = V_1 + V_2 + \dots \)
+    </div>
+    <div class="formula">
+        \( R_{total} = R_1 + R_2 + \dots \)
+    </div>
+
+    <h4>Circuito en Paralelo</h4>
+    <ul>
+        <li>El voltaje es el mismo en cada rama.</li>
+        <li>La corriente total es la suma de las corrientes de cada rama:</li>
+    </ul>
+    <div class="formula">
+        \( I_{total} = I_1 + I_2 + \dots \)
+    </div>
+    <div class="formula">
+        \( \frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots \)
+    </div>
+
+    <h3>3. Materiales</h3>
+    <ul>
+        <li>Protoboard</li>
+        <li>Fuente de alimentación (5 V o 9 V)</li>
+        <li>Resistencias: 220 Ω y 470 Ω</li>
+        <li>Multímetro</li>
+        <li>Cables de conexión</li>
+        <li>Diagramas de conexión</li>
+    </ul>
+
+    <h3>4. Procedimiento</h3>
+    <b>Circuito en Serie:</b>
+    <ol>
+        <li>Colocar las resistencias en el protoboard una tras otra en la misma línea.</li>
+        <li>Conectar a la fuente de alimentación.</li>
+        <li>Medir la corriente total y el voltaje en cada resistencia.</li>
+    </ol>
+    <b>Circuito en Paralelo:</b>
+    <ol>
+        <li>Conectar cada resistencia en ramas independientes a la fuente.</li>
+        <li>Medir el voltaje en cada rama.</li>
+        <li>Medir la corriente en cada rama y la corriente total.</li>
+    </ol>
+
+    <h3>5. Resultados</h3>
+    <table>
+        <tr>
+            <th>Configuración</th>
+            <th>Corriente Total (mA)</th>
+            <th>Voltaje en R1 (V)</th>
+            <th>Voltaje en R2 (V)</th>
+            <th>Observaciones</th>
+        </tr>
+        <tr>
+            <td>Serie</td>
+            <td>15</td>
+            <td>3.3</td>
+            <td>5.7</td>
+            <td>Corriente igual en todos los elementos</td>
+        </tr>
+        <tr>
+            <td>Paralelo</td>
+            <td>41</td>
+            <td>9.0</td>
+            <td>9.0</td>
+            <td>Voltaje igual en cada rama</td>
+        </tr>
+    </table>
+
+    <h3>6. Cálculos</h3>
+    <b>Serie:</b>
+    <div class="formula">
+        \( R_{total} = R_1 + R_2 \)
+    </div>
+    <div class="formula">
+        \( I = \frac{V_{total}}{R_{total}} \)
+    </div>
+    <b>Paralelo:</b>
+    <div class="formula">
+        \( \frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2} \)
+    </div>
+    <div class="formula">
+        \( I_{total} = I_1 + I_2 \)
+    </div>
+
+    <h3>7. Conclusión</h3>
+    <ul>
+        <li>En el circuito en serie, la corriente es constante en todos los elementos, pero el voltaje se reparte.</li>
+        <li>En el circuito en paralelo, el voltaje es igual en todas las ramas y la corriente se reparte según la resistencia de cada rama.</li>
+        <li>La configuración en paralelo es más tolerante a fallas, mientras que la serie se interrumpe si un solo elemento deja de funcionar.</li>
+    </ul>
+
+<br></br> 
 <a href="Sistemadecimal-binario-octal-hexadecimal.html" class="btn">Siguiente: Sistemas númericos</a>
 
 </div>

@@ -111,3 +111,17 @@ body.actividadtikercad .contenedor {
   margin: auto;
 }
 
+/*Pagina actividad lcd keypad*/
+body.actividadLCDKEYPAD {
+  background-color: black;
+  color: white;
+  /* más estilos */
+}
+
+body.actividadLCDKEYPAD .contenedor {
+  background-color: rgba(0,0,0,0.7);
+  max-width: 900px;
+  padding: 40px;
+  margin: auto;
+}
+
