@@ -19,7 +19,7 @@ body {
   background-color: rgba(0, 0, 0, 0.7); /* fondo oscuro transparente */
   padding: 40px 30px;
   border-radius: 20px;
-  max-width: auto;
+  max-width: 1200;
   width: 90%;
 }
 /*Otros contenedores*/
