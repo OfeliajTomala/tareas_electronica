@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Compuertas Lógicas</title>
+    <title>Circuito en serie y paraalelo</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
       /* Estilos para tablas dentro del contenedor */
@@ -22,19 +22,8 @@
         background: linear-gradient(to right, #00ffff, #00c9ff);
         color: #000;
       }
-      h4 {
-        font-size: 2.5em;
-        margin-bottom: 20px;
-        margin-top: 2px;
-        background: linear-gradient(to right, #00ffff, #00c9ff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
       
-      h2, h3, h5 {
-        margin-top: 1em;
-        margin-bottom: 0.5em;
-      }
+    
       strong {
         color: #00c9ff;
       }
@@ -58,24 +47,20 @@
           font-family: monospace;
       }
     </style>
+    
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
+
 </head>
-<body>
+<body class="circuitoenserieyparalelo">
 <div class="contenedor">
-    <h1>Informe de la Práctica</h1>
-    <h2>Ley de Ohm y Circuitos en Serie y Paralelo</h2>
 
-    <h3>1. Objetivo</h3>
-    <ul>
-        <li>Construir y analizar un circuito en serie y uno en paralelo.</li>
-        <li>Medir y comparar la corriente y el voltaje en cada configuración.</li>
-        <li>Comprender el comportamiento de las resistencias en cada conexión.</li>
-    </ul>
-
-    <h3>2. Conceptos</h3>
+    <h1>CIRCUITO EN SERIE Y PARALELO</h1>
+    <div class= "contenedor2">
+    <h2>LEY DE OHM</h2>
+    
     <p><b>Ley de Ohm:</b> Relaciona el voltaje \(V\), la corriente \(I\) y la resistencia \(R\) mediante la fórmula:</p>
     <div class="formula">
         \( V = I \cdot R \)
@@ -86,8 +71,12 @@
         \(I\) = Corriente en amperios (A)<br>
         \(R\) = Resistencia en ohmios (Ω)
     </p>
+    </div>
+    
+    <br></br>
 
-    <h4>Circuito en Serie</h4>
+    <div class= "contenedor2">
+    <h2>Circuito en Serie</h2>
     <ul>
         <li>La corriente es la misma en todos los elementos.</li>
         <li>El voltaje total es la suma de las caídas de tensión:</li>
@@ -98,7 +87,10 @@
     <div class="formula">
         \( R_{total} = R_1 + R_2 + \dots \)
     </div>
-
+    </div>
+    
+    <br></br>
+    <div class="contenedor2">
     <h4>Circuito en Paralelo</h4>
     <ul>
         <li>El voltaje es el mismo en cada rama.</li>
@@ -110,7 +102,19 @@
     <div class="formula">
         \( \frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots \)
     </div>
+    </div>
 
+    <h3>1. Objetivo</h3>
+    <ul>
+        <li>Construir y analizar un circuito en serie y uno en paralelo.</li>
+        <li>Medir y comparar la corriente y el voltaje en cada configuración.</li>
+        <li>Comprender el comportamiento de las resistencias en cada conexión.</li>
+    </ul>
+
+    <h3>Conceptos</h3>
+    
+
+    
     <h3>3. Materiales</h3>
     <ul>
         <li>Protoboard</li>

@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-image: url('Fondopaginaweb\ .jpg'); /* o reemplaza por tu imagen local */
+  background-image: url('imagenes/Fondopaginaweb\ .jpg'); /* o reemplaza por tu imagen local */
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -19,116 +19,164 @@ body {
   background-color: rgba(0, 0, 0, 0.7); /* fondo oscuro transparente */
   padding: 40px 30px;
   border-radius: 20px;
-  max-width: 500px;
+  max-width: auto;
   width: 90%;
 }
+/*Otros contenedores*/
+.contenedor2 {
+  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+  max-width: 900px;
+  padding: 40px;
+  margin: auto;
+}
+/*Contenedor para conceptos*/
+.contenedor3 {
+  text-align: center;
+  background-color: rgba(28, 83, 90, 0.7);
+  max-width: 900px;
+  padding: 40px;
+  border-radius: 20px;
+  margin: auto;
+}
+/*Contenedor para textos dentro de ensayo*/
+/*Contenedor para lo demas*/
+.contenedor5 {
+  text-align: center;
+  background-color:rgba(30, 101, 104, 1);
+  max-width: 900px;
+  padding: 40px;
+  border-radius: 20px;
+  margin: auto;
+}
+/*Contenedor padre para objetivos y materiales*/
+.fila-contenedores {
+  display: flex;           /* activa flexbox */
+  flex-direction: row;     /* alineación horizontal */
+  gap: 20px;               /* espacio entre los contenedores */
+  justify-content: center; /* centra la fila horizontalmente */
+  align-items: stretch;    /* hace que los contenedores tengan la misma altura */
+  flex-wrap: wrap;         /* permite que los contenedores bajen de fila en pantallas pequeñas */
+}
+/*Contenedor para objetivos y materiales*/
+.contenedor4 {
+  text-align: left;
+  background-color: rgba(9, 83, 90, 1);
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 20px;
+  flex:1 1 400px;
+  box-sizing: border-box;
+}
+
 
 /* Título principal */
 h1 {
-  font-size: 2.8em;
+  font-size: 3.8em;
   margin-bottom: 20px;
   background: linear-gradient(to right, #00ffff, #00c9ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/*tipos de texto*/
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  margin-top: 2px;
+  background: linear-gradient(to right, #00ffff, #00c9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  margin-top: 2px;
+  background: linear-gradient(to right, #00F260, #8EF9F3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h4, h5 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+strong {
+  color: #00c9ff;
+}
+
+/* Estilos para tablas dentro del contenedor */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+th {
+  background: linear-gradient(to right, #00ffff, #00c9ff);
+  color: #000;
+}
+      
+/* Para listas */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+  text-align: left;
+}
 
 /* Sección de botones */
 .botones {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap; 
   gap: 20px;
-  align-items: center;
+  justify-content: center;
+  align-items: stretch; 
+  text-align: center;
+  
 }
 
 /* Botones grandes y llamativos */
 .btn {
   text-decoration: none;
-  background: linear-gradient(to right, #6a11cb, #00c9ff);
+  background: linear-gradient(to right, #1c535a, #00c9ff);
   padding: 15px 30px;
   border-radius: 12px;
   color: white;
   font-size: 1.2em;
   font-weight: bold;
+  flex: 1 1 auto;
   width: 250px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.4);
   transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn:hover {
   transform: scale(1.05);
-  background: linear-gradient(to right, #00c9ff, #6a11cb);
+  background: linear-gradient(to right, #00c9ff, #1c535a);
 }
 
-
-
-/*Pagina compuertas*/
-body.pagina-compuertas {
-  background-color: black;
-  color: white;
-  /* más estilos */
-}
-
-body.pagina-compuertas .contenedor {
-  background-color: rgba(0,0,0,0.7);
-  max-width: 900px;
-  padding: 40px;
-  margin: auto;
-}
-body.pagina-compuertas .contenedor2 {
-  background-color: rgba(28, 83, 90, 0.7);
-  max-width: 900px;
-  padding: 40px;
-  border-radius: 20px;
-  margin: auto;
-}
-
-/*Pagina Circuito en serie y en paralelo*/
-body.circuitoenserieyparalelo {
-  background-color: black;
-  color: white;
-  /* más estilos */
-}
-
-body.circuitoenserieyparalelo .contenedor {
-  background-color: rgba(0,0,0,0.7);
-  max-width: 900px;
-  padding: 40px;
-  margin: auto;
-}
-
-
-/*Pagina actividad tinkercad*/
-body.actividadtikercad {
-  background-color: black;
-  color: white;
-  /* más estilos */
-}
-
-body.actividadtikercad .contenedor {
-  background-color: rgba(0,0,0,0.7);
-  max-width: 900px;
-  padding: 40px;
-  margin: auto;
-}
-
-/*Pagina actividad lcd keypad*/
-body.actividadLCDKEYPAD {
-  background-color: black;
-  color: white;
-  /* más estilos */
-}
-
-body.actividadLCDKEYPAD .contenedor {
-  background-color: rgba(0,0,0,0.7);
-  max-width: 900px;
-  padding: 40px;
-  margin: auto;
-}
-body.actividadLCDKEYPAD.contenedor2 {
-  background-color: rgba(28, 83, 90, 0.7);
-  max-width: 900px;
-  padding: 40px;
-  border-radius: 20px;
-  margin: auto;
+/*Botones anterior y siguiente*/
+.fila-botones {
+  display: flex;               /* activa flexbox */
+  justify-content: space-between; /* uno a la izquierda, otro a la derecha */
+  align-items: stretch;         /* centra verticalmente si tienen diferente altura */
+  width: auto;            /* opcional: ancho máximo del contenedor */
+  margin: auto;                /* centra el contenedor horizontalmente */
+  padding: 0 50px;             /* opcional: espacio interno horizontal */
+  gap: 100px;  
 }
 
