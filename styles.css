@@ -62,7 +62,7 @@ body {
 .contenedor4 {
   text-align: left;
   background-color: rgba(9, 83, 90, 1);
-  max-width: 450px;
+  max-width: 390px;
   padding: 40px;
   border-radius: 20px;
   flex:1 1 400px;
@@ -188,5 +188,3 @@ ol {
   padding: 0 50px;             /* opcional: espacio interno horizontal */
   gap: 100px;  
 }
-
-/*prueba2*/
