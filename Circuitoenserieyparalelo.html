@@ -1,196 +1,471 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Circuito en serie y paraalelo</title>
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      /* Estilos para tablas dentro del contenedor */
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 15px 0;
-      }
-      th, td {
-        border: 1px solid #ddd;
-        padding: 8px 12px;
-        text-align: center;
-        background-color: rgba(255, 255, 255, 0.1);
-      }
-      th {
-        background: linear-gradient(to right, #00ffff, #00c9ff);
-        color: #000;
-      }
-      
-    
-      strong {
-        color: #00c9ff;
-      }
-      /* Para listas */
-      ul {
-        list-style-type: disc;
-        padding-left: 20px;
-        text-align: left;
-      }
-      ol {
-        list-style-type: decimal;
-        padding-left: 20px;
-        text-align: left;
-      }
-    
-      .formula {
-          background-color: rgb(33, 159, 157);
-          padding: 10px;
-          border-left: 4px solid #00f;
-          margin: 10px 0;
-          font-family: monospace;
-      }
-    </style>
-    
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
 
 </head>
-<body class="circuitoenserieyparalelo">
-<div class="contenedor">
 
-    <h1>CIRCUITO EN SERIE Y PARALELO</h1>
-    <div class= "contenedor2">
-    <h2>LEY DE OHM</h2>
-    
-    <p><b>Ley de Ohm:</b> Relaciona el voltaje \(V\), la corriente \(I\) y la resistencia \(R\) mediante la fórmula:</p>
-    <div class="formula">
-        \( V = I \cdot R \)
-    </div>
-    <p>
-        Donde:<br>
-        \(V\) = Voltaje en voltios (V)<br>
-        \(I\) = Corriente en amperios (A)<br>
-        \(R\) = Resistencia en ohmios (Ω)
-    </p>
-    </div>
-    
-    <br></br>
-
-    <div class= "contenedor2">
-    <h2>Circuito en Serie</h2>
-    <ul>
-        <li>La corriente es la misma en todos los elementos.</li>
-        <li>El voltaje total es la suma de las caídas de tensión:</li>
-    </ul>
-    <div class="formula">
-        \( V_{total} = V_1 + V_2 + \dots \)
-    </div>
-    <div class="formula">
-        \( R_{total} = R_1 + R_2 + \dots \)
-    </div>
-    </div>
-    
-    <br></br>
+<body>
     <div class="contenedor2">
-    <h4>Circuito en Paralelo</h4>
-    <ul>
-        <li>El voltaje es el mismo en cada rama.</li>
-        <li>La corriente total es la suma de las corrientes de cada rama:</li>
-    </ul>
-    <div class="formula">
-        \( I_{total} = I_1 + I_2 + \dots \)
+
+        <h1>CIRCUITO EN SERIE Y PARALELO</h1>
+        <div class="contenedor3">
+            <h2>LEY DE OHM</h2>
+            <br>
+            <b>Relaciona el voltaje \(V\), la corriente \(I\) y la resistencia \(R\) mediante la fórmula:</b>
+            <br>
+            <div class="formula">
+                \( V = I \cdot R \)
+            </div>
+            <h4>Donde:</h4>
+            \(V\) = Voltaje en voltios (V)<br>
+            \(I\) = Corriente en amperios (A)<br>
+            \(R\) = Resistencia en ohmios (Ω)<br>
+
+            <br>
+            <h3>Fórmulas derivadas:</h3>
+            <br>
+            <b>Para calcular corriente:</b>
+            <div class="formula">
+                \( I = \frac{V}{R}\)
+            </div>
+            <br>
+            <b>Para calcular resistencia:</b>
+            <div class="formula">
+                \( R = \frac{V}{I}\)
+            </div>
+        </div>
+        <br></br>
+
+        <div class="contenedor3">
+            <h2>Circuito en Serie</h2>
+            <p>En un circuito en serie, los componentes están conectados uno tras otro,
+                formando una sola trayectoria para la corriente.</p>
+            <b>Características:</b>
+            <ul>
+                <li>La corriente (I) es la misma en todas las resistencias.</li>
+                <li>El voltaje total (V) se divide entre las resistencias.</li>
+                <li>La resistencia total (Req) es la suma de todas las resistencias.</li>
+            </ul>
+
+            <b>Fórmulas:</b>
+            <h5>Resistencia equivalente: </h5>
+            <div class="formula">
+                \[ R_{eq} = R_1 + R_2 + R_3 + \dots + R_n\]
+            </div>
+
+            <h5>Corriente total</h5>
+            <div class="formula">
+                \[I = \frac{V_{total}}{R_{eq}}\]
+            </div>
+            <h5>Voltaje</h5>
+            <div class="formula">
+                \[ V_{total} = V_1 + V_2 + \dots + V_n\]
+            </div>
+
+        </div>
+        <br></br>
+
+        <div class="contenedor3">
+            <h2>Circuito en Paralelo</h2>
+            <p>En un circuito en paralelo, los componentes están conectados en ramas separadas,
+                compartiendo el mismo voltaje.</p>
+            <b>Características</b>
+            <ul>
+                <li>El voltaje es el mismo en cada rama.</li>
+                <li> La corriente total (I) se divide entre las resistencias.</li>
+                <li> La resistencia equivalente (Req) es menor que la más pequeña del circuito.</li>
+            </ul>
+            <b>Fórmulas</b>
+            <h5>Resistencia equivalente</h5>
+            <div class="formula">
+                \[ \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \dots\]
+            </div>
+
+            <h5>Fesistencia Para dos resistencias:</h5>
+            <div class="formula">
+                \[ R_{eq} = \frac{R_1 \times R_2}{R_1 + R_2}\]
+            </div>
+
+            <h5>Corriente total :</h5>
+            <div class="formula">
+                \[ R_{eq} = \frac{R_1 \times R_2}{R_1 + R_2}\]
+            </div>
+
+            <h5>Corriente en cada rama :</h5>
+            <div class="formula">
+                \[I_1 = \frac{V}{R_1}, \quad I_2 = \frac{V}{R_2}, \quad \dots\]
+            </div>
+        </div>
+        <br><br>
+        
+         <h1>¿COMO MEDIR CORRIENTE Y VOLTAJE DE UN CIRCUITO?</h1>
+   <div class="fila-contenedores">
+     <div class="contenedor4">    
+     <h2>Voltaje</h2>
+     <p>Es la diferencia de potencial eléctrico entre dos puntos. 
+     Se mide en Voltios (V). 
+     Se mide en paralelo al elemento. 
+     Multímetro en modo voltímetro (V). 
+     No abrir circuito. 
+     Revisar que esté en DC o AC según fuente.
+     </p>
+     </div>
+     <div class="contenedor4">
+     <h2>Corriente</h2>
+     <p>Es el flujo de electrones a través de un conductor. 
+      Se mide en Amperios (A). 
+      Se mide en serie con la rama del circuito. 
+      Multímetro en modo amperímetro (A). 
+      Se debe abrir el circuito para insertar el multímetro. 
+      Comenzar con la escala más alta para evitar daño.
+      </p>
+      </div>
+   </div>
+   <br><br>
+
+   <div class="contenedor3">
+     <h2>Cómo medir con multímetro </h2> 
+     <div class="fila-contenedores">
+        <div class="contenedor4">
+        <h3>Medir Voltaje</h3>
+        <br>    
+        <b>Conexión:</b> 
+        Multímetro en modo voltímetro (V), puntas en paralelo al componente o tramo a medir.
+        <p>Usa escala adecuada (DC o AC).</p>
+        <p>No interrumpas el circuito.</p>
+        </div>
+        <div class="contenedor4">
+        <h3>Medir Corriente</h3>
+        <br>
+        <b>Conexión:</b> 
+        Multímetro en modo amperímetro (A), puntas en serie con la rama del circuito.
+        <p>Debes abrir el circuito para insertar el multímetro.</p> 
+        <p>Empieza con la escala más alta para no quemar el fusible interno.</p>
+        </div>
+     </div>
+   </div> 
+   <br><br>
+
+   <div class="contenedor3">
+   <h2>¿COMO CALCULAR LA RESISTENCIA EQUIVALENTE?</h2>
+   <b>Resistencia:</b>
+   Oposición al flujo de corriente. Se mide en OHMIOS (Ω).
+   <b>Resistencia equivalente:</b> 
+   Es la resistencia total que puede reemplazar a varias resistencias.
+   <br><br>
+   <h3>Como calcular la resistencia equivalente </h3>
+   <div class="fila-contenedores">
+      <div class="contenedor4">
+      <h3>¿Circuito en serie?</h3>	
+      <p>La resistencia equivalente del circuito conectado en serie se encuentra sumando los valores de las resistencias individuales.</p>
+      <br>
+      \[ R_{eq} = R_1 + R_2 + \dots + R_n \]
+      </div>
+      <div class="contenedor4">
+      <h3>¿Circuito en paralelo?</h3>
+      <p>En un circuito en paralelo, la resistencia equivalente se calcula sumando los inversos y luego tomando el inverso del resultado:</p>
+      <br>
+      \[ \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n} \]
+      </div>
+   </div>  
+  <br>
+
+  <div class="contenedor5">
+    <h3>¿Qué hacer si es mixto?</h3>    
+    <p>Resolver paso a paso: primero combina series, luego paralelos, o viceversa.</p>
+   </div>
+        
+   </div>
+   <br></br> 
+
+        <div class="contenedor3">
+
+            <h2>SIMULACIÓN DE CIRCUITO EN SERIE Y EN PARALELO</h2>
+            <div class="fila-contenedores">
+                <div class="contenedor4">
+                    <h3>1. Objetivo</h3>
+                    <ul>
+                        <li>Construir y analizar un circuito en serie y uno en paralelo.</li>
+                        <li>Medir y comparar la corriente y el voltaje en cada configuración.</li>
+                        <li>Comprender el comportamiento de las resistencias en cada conexión.</li>
+                    </ul>
+                </div>
+                <div class="contenedor4">
+                    <h3>3. Materiales</h3>
+                    <ul>
+                        <li>Protoboard</li>
+                        <li>Fuente de alimentación (9 V)</li>
+                        <li>Resistencias</li>
+                        <li>Multímetro</li>
+                        <li>Cables de conexión</li>
+                    </ul>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="contenedor5">
+                <h3>4. Procedimiento</h3>
+
+                <div class="contenedor3">
+                    <strong>Circuito en Serie:</strong>
+                    <ol>
+                        <li>Agregamos los componentes y montamos el circuito</li>
+                        <li>Se midió la Caída de Voltaje en cada resistencia colocando el voltímetro en paralelo con
+                            cada una.</li>
+                        <li>Se midió la Corriente Total colocando el amperímetro en serie dentro del circuito.</li>
+                    </ol>
+                </div>
+                <br><br>
+                <div class="contenedor3">
+                    <strong>Circuito en Paralelo:</strong>
+                    <ol>
+                        <li>Agregamos los componentes y montamos el circuito</li>
+                        <li>Se midió el Voltaje en cada resistencia, el cual debe ser igual al de la fuente.</li>
+                        <li>Se midió la Corriente Total colocando el amperímetro en serie justo después de la fuente.
+                        </li>
+                        <li>Se midió la Corriente que circula por cada rama colocando el amperímetro en serie con cada
+                            resistencia.</li>
+                    </ol>
+                </div>
+
+            </div>
+            <br><br>
+
+            <div class="contenedor3">
+                <h2>CIRCUITO EN SERIE Y EN PARALELO</h2>
+                <iframe width="725" height="453" src="https://www.tinkercad.com/embed/aqej5gmIgEH?editbtn=1"
+                    frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            </div>
+            <br><br>
+
+            <div class="contenedor5">
+                <h3>5. Resultados</h3>
+                <br>
+                <p>A continuación, se presentan los resultados teóricos calculados y los valores que se esperan obtener
+                    en la simulación.</p>
+                <table>
+                    <tr>
+                        <th>Parámetro</th>
+                        <th>Circuito en Serie Teórico</th>
+                        <th>Circuito en Paralelo Teórico</th>
+                    </tr>
+                    <tr>
+                        <td>Voltaje de Fuente (V)</td>
+                        <td>9 V</td>
+                        <td>9 V</td>
+                    </tr>
+                    <tr>
+                        <td>Corriente Total</td>
+                        <td>I = V/R = 9/270 = 0.0333 A (33.3 mA)</td>
+                        <td>I = V/R = 9/26.1 ≈ 0.345 A (345 mA)</td>
+                    </tr>
+                    <tr>
+                        <td>V_R1 (100 Ω)</td>
+                        <td>V = I*R = 0.0333 * 100 = 3.33 V</td>
+                        <td>9 V</td>
+                    </tr>
+                    <tr>
+                        <td>V_R2 (50 Ω)</td>
+                        <td>V = I*R = 0.0333 * 50 = 1.67 V</td>
+                        <td>9 V</td>
+                    </tr>
+                    <tr>
+                        <td>V_R3 (120 Ω)</td>
+                        <td>V = I*R = 0.0333 * 120 = 4.00 V</td>
+                        <td>9 V</td>
+                    </tr>
+                    <tr>
+                        <td>I_R1 (100 Ω)</td>
+                        <td>33.3 mA </td>
+                        <td>I = V/R = 9/100 = 0.09 A (90 mA)</td>
+                    </tr>
+                    <tr>
+                        <td>I_R2 (50 Ω)</td>
+                        <td>33.3 mA </td>
+                        <td>I = V/R = 9/50 = 0.18 A (180 mA)</td>
+                    </tr>
+                    <tr>
+                        <td>I_R3 (120 Ω)</td>
+                        <td>33.3 mA </td>
+                        <td>I = V/R = 9/120 = 0.075 A (75 mA)</td>
+                    </tr>
+
+                </table>
+                <br><br>
+                <table>
+                    <tr>
+                        <th>Parámetro</th>
+                        <th>Circuito en Serie Simulación</th>
+                        <th>Circuito en Paralelo Simulación</th>
+                    </tr>
+                    <tr>
+                        <td>Voltaje de Fuente (V)</td>
+                        <td>8.95 V</td>
+                        <td>8.51 V</td>
+                    </tr>
+                    <tr>
+                        <td>Corriente Total</td>
+                        <td>33.1 mA</td>
+                        <td>326 mA</td>
+                    </tr>
+                    <tr>
+                        <td>V_R1 (100 Ω)</td>
+                        <td>3.31 V</td>
+                        <td>8.51 V</td>
+                    </tr>
+                    <tr>
+                        <td>V_R2 (50 Ω)</td>
+                        <td>1.66 V</td>
+                        <td>8.51 V</td>
+                    </tr>
+                    <tr>
+                        <td>V_R3 (120 Ω)</td>
+                        <td>3.98 V</td>
+                        <td>8.51 V</td>
+                    </tr>
+                    <tr>
+                        <td>I_R1 (100 Ω)</td>
+                        <td>33.1 mA </td>
+                        <td>88.7 mA</td>
+                    </tr>
+                    <tr>
+                        <td>I_R2 (50 Ω)</td>
+                        <td>33.1 mA </td>
+                        <td>175 mA</td>
+                    </tr>
+                    <tr>
+                        <td>I_R3 (120 Ω)</td>
+                        <td>33.1 mA </td>
+                        <td>74.1 mA</td>
+                    </tr>
+
+                </table>
+            </div>
+            <br><br>
+            <div class="contenedor5">
+                <h3>6. Cálculos</h3>
+                <br><br>
+                <div class="contenedor3">
+                    <h3>Serie:</h3>
+                    <p>Resistencia total:</p>
+                    <p>
+                        $$
+                        R_t = R_1 + R_2 + R_3 = 100 + 120 + 50 = 270 \, \Omega
+                        $$
+                    </p>
+
+                    <p>Corriente total:</p>
+                    <p>
+                        $$
+                        I = \frac{V}{R_t} = \frac{9}{270} = 0.0333 \, A = 33.3 \, mA
+                        $$
+                    </p>
+
+                    <p>Caída de voltaje en cada resistencia:</p>
+                    <ul>
+                        <li><strong>R1 = 100 Ω:</strong>
+                            $$ V = I \cdot R = 0.0333 \times 100 = 3.33 \, V $$</li>
+                        <li><strong>R2 = 120 Ω:</strong>
+                            $$ V = 0.0333 \times 120 = 4.00 \, V $$</li>
+                        <li><strong>R3 = 50 Ω:</strong>
+                            $$ V = 0.0333 \times 50 = 1.67 \, V $$</li>
+                    </ul>
+                    <p>Verificación: $$3.33 + 4.00 + 1.67 = 9.0 \, V$$</p>
+                </div>
+                <br>
+                <div class="contenedor3">
+                    <h3>Paralelo:</h3>
+                    <p>Resistencia equivalente:</p>
+                    <p>
+                        $$
+                        \frac{1}{R_{eq}} = \frac{1}{100} + \frac{1}{120} + \frac{1}{50}
+                        $$
+                    </p>
+                    <p>
+                        $$
+                        \frac{1}{R_{eq}} = 0.01 + 0.00833 + 0.02 = 0.03833
+                        $$
+                    </p>
+                    <p>
+                        $$
+                        R_{eq} = \frac{1}{0.03833} \approx 26.1 \, \Omega
+                        $$
+                    </p>
+
+                    <p>Corriente total:</p>
+                    <p>
+                        $$
+                        I_T = \frac{9}{26.1} \approx 0.345 \, A = 345 \, mA
+                        $$
+                    </p>
+
+                    <p>Corriente por cada rama (voltaje igual a 9 V):</p>
+                    <ul>
+                        <li>R1 = 100 Ω: $$ I = \frac{9}{100} = 0.090 \, A = 90 \, mA $$</li>
+                        <li>R2 = 120 Ω: $$ I = \frac{9}{120} = 0.075 \, A = 75 \, mA $$</li>
+                        <li>R3 = 50 Ω: $$ I = \frac{9}{50} = 0.18 \, A = 180 \, mA $$</li>
+                    </ul>
+                    <p>Verificación: $$90 + 75 + 180 = 345 \, mA$$ </p>
+
+                </div>
+            </div>
+            <br><br>
+
+            <div class="contenedor5">
+                <h3>7. ANÁLISIS Y DISCUSIÓN</h3><br>
+
+                <p>El análisis de los resultados confirma la teoría, aunque se observan discrepancias mínimas entre
+                los valores calculados y los simulados, todas dentro de un margen de error esperado en cualquier experimentación.<br>
+                <br>
+                A pesar de las ligeras variaciones, los circuitos cumplen con las Leyes de Kirchhoff.
+                <ul>
+                    <li>En serie, la suma de las caídas de voltaje medidas (~3.31V + ~1.66V + ~3.98V ≈ 8.95V) se acerca
+                        al valor de la fuente (9V), considerando el redondeo de las mediciones. </li>
+                    <li>En paralelo, la suma de las corrientes de rama (~88.7mA + ~175mA + ~74.1mA ≈ 326mA) coincide
+                        con la corriente total medida.</li>
+                </ul>
+                <br>
+                Posibles Fuentes de Discrepancia: Las pequeñas diferencias pueden atribuirse a:
+                <ul>
+                    <li>Precisión del Multímetro Virtual: El instrumento de medición en la simulación tiene una
+                        precisión limitada y puede introducir redondeos.</li>
+                    <li>Tolerancia de las Resistencias Virtuales: Aunque se configuraron con valores nominales
+                        perfectos (100, 50, 120), el motor de cálculo de la simulación podría operar con más
+                        decimales, dando resultados no enteros perfectos.</li>
+                    <li>Pérdidas por Calentamiento: Algunas simulaciones modelan efectos no ideales, como una
+                        mínima variación de la resistencia con el paso de la corriente.</li>
+
+                </ul>
+                </p>
+
+            </div>
+            <br></br>
+            <div class="contenedor5">
+                <h3>CONCLUSIONES</h3>
+                <ul>
+                    <li>Se comprobó que las reglas de asociación de resistencias y las Leyes de Kirchhoff se cumplen en la práctica, incluso con ligeras variaciones propias de cualquier proceso de medición, ya sea virtual o físico.</li>
+                    <li>Las discrepancias entre los valores teóricos y simulados son mínimas y no afectan las conclusiones cualitativas sobre el comportamiento de los circuitos. Estas diferencias son atribuibles a limitaciones inherentes a los instrumentos de medición y a los modelos de simulación.</li>
+                </ul>
+            </div>
+            <br>
+
+        </div>
+        <br><br>
+        <div class="fila-botones">
+            <a href="Compuertaslogicas.html" class="btn">Anterior: Compuertas lógicas</a>
+            <br><br>
+            <a href="Sistemadecimal-binario-octal-hexadecimal.html" class="btn">Siguiente: Sistema
+                decimal-binario-octal-hexadecimal</a>
+        </div>
     </div>
-    <div class="formula">
-        \( \frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots \)
-    </div>
-    </div>
-
-    <h3>1. Objetivo</h3>
-    <ul>
-        <li>Construir y analizar un circuito en serie y uno en paralelo.</li>
-        <li>Medir y comparar la corriente y el voltaje en cada configuración.</li>
-        <li>Comprender el comportamiento de las resistencias en cada conexión.</li>
-    </ul>
-
-    <h3>Conceptos</h3>
-    
-
-    
-    <h3>3. Materiales</h3>
-    <ul>
-        <li>Protoboard</li>
-        <li>Fuente de alimentación (5 V o 9 V)</li>
-        <li>Resistencias: 220 Ω y 470 Ω</li>
-        <li>Multímetro</li>
-        <li>Cables de conexión</li>
-        <li>Diagramas de conexión</li>
-    </ul>
-
-    <h3>4. Procedimiento</h3>
-    <b>Circuito en Serie:</b>
-    <ol>
-        <li>Colocar las resistencias en el protoboard una tras otra en la misma línea.</li>
-        <li>Conectar a la fuente de alimentación.</li>
-        <li>Medir la corriente total y el voltaje en cada resistencia.</li>
-    </ol>
-    <b>Circuito en Paralelo:</b>
-    <ol>
-        <li>Conectar cada resistencia en ramas independientes a la fuente.</li>
-        <li>Medir el voltaje en cada rama.</li>
-        <li>Medir la corriente en cada rama y la corriente total.</li>
-    </ol>
-
-    <h3>5. Resultados</h3>
-    <table>
-        <tr>
-            <th>Configuración</th>
-            <th>Corriente Total (mA)</th>
-            <th>Voltaje en R1 (V)</th>
-            <th>Voltaje en R2 (V)</th>
-            <th>Observaciones</th>
-        </tr>
-        <tr>
-            <td>Serie</td>
-            <td>15</td>
-            <td>3.3</td>
-            <td>5.7</td>
-            <td>Corriente igual en todos los elementos</td>
-        </tr>
-        <tr>
-            <td>Paralelo</td>
-            <td>41</td>
-            <td>9.0</td>
-            <td>9.0</td>
-            <td>Voltaje igual en cada rama</td>
-        </tr>
-    </table>
-
-    <h3>6. Cálculos</h3>
-    <b>Serie:</b>
-    <div class="formula">
-        \( R_{total} = R_1 + R_2 \)
-    </div>
-    <div class="formula">
-        \( I = \frac{V_{total}}{R_{total}} \)
-    </div>
-    <b>Paralelo:</b>
-    <div class="formula">
-        \( \frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2} \)
-    </div>
-    <div class="formula">
-        \( I_{total} = I_1 + I_2 \)
-    </div>
-
-    <h3>7. Conclusión</h3>
-    <ul>
-        <li>En el circuito en serie, la corriente es constante en todos los elementos, pero el voltaje se reparte.</li>
-        <li>En el circuito en paralelo, el voltaje es igual en todas las ramas y la corriente se reparte según la resistencia de cada rama.</li>
-        <li>La configuración en paralelo es más tolerante a fallas, mientras que la serie se interrumpe si un solo elemento deja de funcionar.</li>
-    </ul>
-
-<br></br> 
-<a href="Sistemadecimal-binario-octal-hexadecimal.html" class="btn">Siguiente: Sistemas númericos</a>
-
-</div>
-
 </body>
+
 </html>

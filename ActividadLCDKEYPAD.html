@@ -1,26 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Actividad LCD KEYPAD</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    h2, h3, h4, h5 {
-        margin-top: 1em;
-        margin-bottom: 0.5em;
-    } 
-  </style>
 </head>
-<body class="actividadLCDKEYPAD">
 
-  <div class="contenedor">
-    <h1>ACTIVIDAD LCD KEYPAD</h1>
-    Crear un sistema de inicio de sesión si la contraseña es correcta mostrar en el LCD Correcto y encender un led, si es incorrecto encender una alarma y mostrar incorrecto en el LCD
-     <br>
-  </br>
-   <iframe width="725" height="453" src="https://www.tinkercad.com/embed/7jUTupS7QCP?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<body>
 
-  </div>
+  <div class="contenedor2">
+    <h1>ACTIVIDAD 5</h1><br>
+    <h2>Sistema de inicio de sesión</h2>
+  <div class="contenedor5">
+    
+    <div class="contenedor3">
+      <p>Esta actividad implementa un sistema básico de inicio de sesión utilizando una placa Arduino, un display LCD y un teclado matricial (keypad).
+         El sistema valida una contraseña predefinida y proporciona retroalimentación visual mediante el LCD y otros componentes</p>
+    </div>
+    <br><br>
+    <div class="fila-contenedores">
+      <div class="contenedor4">
+        <h3>OBJETIVOS</h3><br>
+        <strong>Objetivo General</strong>
+        <p>Desarrollar un sistema de autenticación que permita verificar credenciales mediante un teclado matricial y proporcione retroalimentación a través de una pantalla LCD y un led o una alarma</p>
+        <strong>Objetivos Específicos</strong>
+        <ul style="display: inline-block; text-align: left;">
+          <li>Configurar e implementar la comunicación entre el teclado matricial, el display LCD y la placa Arduino.</li>
+          <li>Programar la lógica de verificación de una contraseña predefinida de 3 dígitos.</li>
+          <li>Implementar un sistema de retroalimentación visual (LCD) y luminosa (LEDs) para indicar el éxito o fracaso en la autenticación con una alarma.</li>
+        </ul>
+      </div>
+      <br>
+      <div class="fila-contenedores">
+        <div class="contenedor4">
+          <h3>Materiales y Equipos</h3>
+          <ul style="display: inline-block; text-align: left;">
+            <li>Computadora con acceso a Tinkercad Circuits (para simulación)</li>
+            <li>Arduino UNO</li>
+            <li>Display LCD 16x2</li>
+            <li>LED</li>
+            <li>Teclado matricial 4x4</li>
+            <li>Protoboard</li>
+            <li>Piezoeléctrico (buzzer)</li>
+            <li>Cables</li>
+            <li>Resistencia</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contenedor3">
+        <h3>PROCEDIMIENTO</h3><br>
+        <ol style="display: inline-block; text-align: left;">
+          <li>Conectamos los componentes de la siguiente manera:
+            <ul style="display: inline-block; text-align: left;">
+              <li>LCD: 6 pines digitales (RS, E, DB4-DB7) en los pines del 2 al 7</li>
+              <li>Keypad: 4 pines analógicos (A0-A3) para filas y 4 pines digitales (8-11) para columnas</li>
+              <li>LED verde en pin 13 (acceso correcto)</li>
+              <li>Piezo en pin 12 (acceso incorrecto)</li>
+            </ul>
+          </li>
+          <li>Se configuraron las librerías LiquidCrystal.h para controlar el LCD y Keypad.h para gestionar el teclado matricial.</li>
+          <li>Se definió una contraseña preestablecida: "123"</li>
+          <li>Se implementó la captura de hasta 3 caracteres ingresados por el usuario</li>
+          <li>Se programó la comparación entre la contraseña ingresada y la almacenada</li>
+          <li>Se configuraron mensajes en el LCD ("Correcto"/"Incorrecto")</li>
+          <li>Se implementó el control del LED verde para acceso concedido</li>
+          <li>Se programó la activación del piezo con tono de alarma para acceso denegado</li>
+          <li>Se verificó el funcionamiento del sistema ingresando contraseñas correctas (activación LED) e incorrectas (activación de alarma piezoeléctrica).</li>
+        </ol>
+      </div>
+
+      <div class="contenedor3">
+      <h3>Crear un sistema de inicio de sesión si la contraseña es correcta mostrar en el LCD Correcto y encender un led, si
+        es incorrecto encender una alarma y mostrar incorrecto en el LCD</h3>
+        <br><br>
+        <iframe width="725" height="453" src="https://www.tinkercad.com/embed/7jUTupS7QCP?editbtn=1" frameborder="0"
+          marginwidth="0" marginheight="0" scrolling="no"></iframe>
+      
+      </div>
+      <br>
+
+      <div class="contenedor3">
+        <h3>RESULTADOS</h3>
+        <table>
+          <tr>
+            <th>Intento</th>
+            <th>Contraseña Ingresada</th>
+            <th>Comportamiento LCD</th>
+            <th>Comportamiento LED (Pin 13)</th>
+            <th>Comportamiento Piezo (Pin 12)</th>
+            <th>Resultado</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>"123"</td>
+            <td>Mostró "Correcto" en segunda línea</td>
+            <td>Encendido por 2 segundos</td>
+            <td>Sin activación</td>
+            <td>Acceso concedido</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>"124"</td>
+            <td>Mostró "Incorrecto" en segunda línea</td>
+            <td>Sin activación</td>
+            <td>Tonos de alarma por 2 segundos</td>
+            <td>Acceso denegado</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>"122"</td>
+            <td>Mostró "Incorrecto" en segunda línea</td>
+            <td>Sin activación</td>
+            <td>Tonos de alarma por 2 segundos</td>
+            <td>Acceso denegado</td>
+        </tr>         
+        </table>
+        <br>
+        <p><strong>Tiempo de respuesta</strong></p>
+        <ul style="display: inline-block; text-align: left;">
+          <li>Tiempo de procesamiento: < 100 ms desde último dígito hasta respuesta</li>
+          <li>Duración feedback visual: 2000 ms para mensaje LCD</li>
+          <li>Duración LED: 2000 ms encendido</li>
+          <li>Duración alarma piezo: 2000 ms con tono intermitente</li>
+        </ul>
+        <br>
+        <p><strong>Observaciones de comportamiento</strong></p>
+        <ul style="display: inline-block; text-align: left;">
+          <li>Respuesta inmediata al completar los 3 dígitos</li>
+          <li>Borrado automático de pantalla después de cada intento</li>
+          <li>Retroalimentación clara y diferenciada entre acceso concedido/denegado</li>
+          <li>Secuencia completa: entrada → procesamiento → respuesta → reset</li>
+        </ul>
+
+      </div>
+
+      <div class="contenedor3">
+        <h3>ANÁLISIS Y DISCUSIÓN</h3> <br>
+        <ul style="display: inline-block; text-align: left;">
+          <li>La combinación de señales visuales y auditivas demostró ser efectiva</li>
+          <li>El 100% de los intentos fueron claramente identificables </li>
+          <li>Tiempos de respuesta adecuados para aplicación en tiempo real</li>
+        </ul>
+      </div><br>
+
+      <div class="contenedor3">
+        <h3>CONCLUSIONES</h3>
+        <ul style="display: inline-block; text-align: left;">
+          <li>Se implementó exitosamente un sistema de autenticación con retroalimentación multimodal que combina señales visuales (LCD, LED) y auditivas (piezo).</li>
+          <li>El sistema demostró 100% de efectividad en la diferenciación entre acceso concedido y denegado mediante señales multimodales.</li>
+          <li>Los tiempos de respuesta del sistema son adecuados para aplicaciones</li>
+          <li>La arquitectura implementada demostró ser robusta y confiable durante las pruebas repetidas.</li>
+        </ul>
+        <br><br>
+
+        <h3>APRENDIZAJE OBTENIDO</h3>
+        <br>
+        <ul style="display: inline-block; text-align: left;">
+          <li>La importancia de cuantificar tiempos de respuesta y características de las señales para evaluar la efectividad del sistema.</li>
+          <li>Se desarrollaron habilidades para integrar y controlar simultáneamente diferentes tipos de actuadores (visuales y auditivos).</li>
+          <li>Se practicó la asignación eficiente de pines y recursos del microcontrolador para diferentes funcionalidades.</li>
+        </ul>
+      </div>
+      
+    </div>
+ </div>
+ <br><br>
+    <div class="fila-botones">
+      <a href="Actividad1Tinkercad.html" class="btn">Anterior: Actividad 1 Tinkercad</a>
+      <br><br>
+      <a href="index.html" class="btn">Página Principal</a>
+    </div>
+</div>
+
 </body>
+
 </html>

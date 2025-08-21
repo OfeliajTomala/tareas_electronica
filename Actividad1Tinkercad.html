@@ -5,25 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Actividad Tinkercad</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    h2, h3, h4, h5 {
-        margin-top: 1em;
-        margin-bottom: 0.5em;
-    } 
-  </style>
 </head>
 <body class="actividadtikercad">
-
-  <div class="contenedor">
-    <h1>ACTIVIDAD 1 TINKERCAD ARDUINOS</h1>
+ <div class="contenedor2">
+    <h1>ACTIVIDAD 1</h1> 
+    <h2>7 leds utilizando el bucle while y for</h2>
+    <div class="contenedor3">
+        <p>En esta actividad se utiliza un microcontrolador Arduino para controlar el encendido secuencial de 7 LEDs conectados a una protoboard. 
+          Mediante la programación con bucles while y for, se busca optimizar el proceso de encendido de múltiples LEDs sin repetir código para cada uno, 
+          facilitando así el control y ahorro de líneas de programación. Esta técnica es fundamental en el aprendizaje de estructuras repetitivas dentro 
+          de la programación en sistemas embebidos y electrónica básica.</p>
+    </div>    
+    <br><br>
+    <div class="fila-contenedores">
+    <div class="contenedor4">
+    <h3>OBJETIVOS</h3><br>
+    <strong>Objetivo General</strong>
+    <p>Encender y apagar secuencialmente  7 LEDs conectados a un Arduino usando estructuras de control repetitivas, específicamente los bucles for y while.</p>
+    <strong>Objetivos Específicos</strong>
+    <ul style="display: inline-block; text-align: left;">
+    <li>Implementar un programa que utilice un bucle for y while para encender los LEDs de uno en uno.</li>      
+    <li>Analizar las ventajas del uso de bucles en la programación</li>
+    </ul>
+    </div>
+    <br>
+    <div class="fila-contenedores">
+    <div class="contenedor4">
+    <h3>Materiales y Equipos</h3>
+    <ul style="display: inline-block; text-align: left;">
+        <li>Computadora con acceso a Tinkercad Circuits (para simulación)</li>
+        <li>Arduino UNO</li>
+        <li>7 LEDs de diferentes colores</li>
+        <li>7 resistencias</li>
+        <li>Protoboard</li>
+        <li>Cables</li>    
+    </ul>
+    </div>    
+    </div>
+    
+    <div class="contenedor3">
+        <h3>PROCEDIMIENTO</h3>
+        <ol style="display: inline-block; text-align: left;">
+            <li>Conectar el Arduino UNO a la protoboard.</li>
+            <li>Colocar 7 LEDs en la protoboard, conectando el ánodo de cada LED a los pines digitales 2, 3, 4, 5, 6 , 7 y 8 del Arduino mediante cables.</li>
+            <li>Conectar una resistencia en serie con cada LED para protegerlos.</li>
+            <li>Conectar resistencias en el cátodo de cada LED y de ahí a tierra (GND).</li>
+            <li>Programar en Arduino usando los bucle for y while para encender secuencialmente los LEDs.</li>
+            <li>Declarar la variable leds con los números de pin para los LEDs</li>
+            <li>Configurar todos los pines como salidas en la función setup()</li>
+            <li>Implementar dos bucles while en la función loop():Primer bucle: recorre los LEDs de 0 a 6 (pines 2 a 8) y Segundo bucle: recorre los LEDs de 6 a 0 (pines 8 a 2)</li>
+            <li>Establecer tiempos de 3 segundos encendido y 2 segundos apagado</li>
+            <li>Verificar el correcto encendido y apagado en la simulación.</li>
+        </ol>
+    </div> 
+   
+    <div class="contenedor3">
     <h2>Encender 7 leds utilizando el bucle while y for</h2>
     <iframe width="725" height="453" src="https://www.tinkercad.com/embed/eDqLFUgZokP?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-    
-    <h2>Encender 4 leds con arduino</h2>
-    <iframe width="725" height="453" src="https://www.tinkercad.com/embed/5jFYLvaikCj?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-    
+    </div>
+    <br>   
+
+    <div class="contenedor3">
+        <h3>RESULTADOS</h3>
+        <ul style="display: inline-block; text-align: left;">  
+          <li>Los LEDs se encendieron y apagaron uno por uno en orden secuencial, primero en dirección ascendente y luego en dirección descendente, permitiendo una observación clara de cada ciclo completo.</li>
+          <li>El retardo de 3 segundos en encendido y 2 segundos en apagado fue suficiente para distinguir visualmente cada LED antes de pasar al siguiente en la secuencia.</li>
+          <li>No se presentó ningún parpadeo extraño ni fallos en la secuencia durante las pruebas</li>
+        </ul>      
+    </div>
+
+    <div class="contenedor3">
+        <h3>ANÁLISIS Y DISCUSIÓN</h3>
+        <p>El código implementado utiliza eficientemente las estructuras de control iterativas para crear una secuencia visual atractiva. 
+          El uso de una variable para almacenar los números de pin permite un código más organizado y escalable. 
+          Los tiempos de delay() (3000ms encendido y 2000ms apagado) son apropiados para permitir una visualización clara del efecto, 
+          aunque podrían ajustarse para diferentes velocidades.
+          <p>
+          <p>La implementación con dos bucles while permite crear el efecto de ida y vuelta en la secuencia de LEDs. 
+          El primer while incrementa el índice para recorrer los LEDs en orden ascendente, 
+          mientras que el segundo while decrementa el índice para el recorrido inverso.</p>
+
+    </div><br>
+
+    <div class="contenedor3">
+        <h3>CONCLUSIONES</h3>
+        <ul style="display: inline-block; text-align: left;">
+        <li>Se logró implementar exitosamente el control de 7 LEDs con una secuencia bidireccional</li>
+        <li>Las estructuras de control demostraron ser eficaces para crear patrones de iluminación</li>  
+        <li>El uso de delays permite controlar efectivamente los tiempos de encendido y apagado</li>        
+        </ul>
+        <br><br>
+        
+        <h3>APRENDIZAJE OBTENIDO</h3>
+        <br>
+        <ul style="display: inline-block; text-align: left;">
+        <li>Configuración de pines digitales como salidas en Arduino</li>
+        <li>Implementación de bucles for y while para control secuencial</li>
+        <li>Manejo de estructuras de control para recorridos bidireccionales</li>
+        </ul>
+    </div>   
+    <br>
+    <br>
+  </div>  
+  <div class="fila-botones">
+  <a href="Actividadenclasetinkercad.html" class="btn">Anterior: Actividad en clase</a>
+  <br><br> 
+  <a href="Actividad2Tinkercad.html" class="btn">Siguiente: Actividad 2</a>
+  </div>
     
 
-  </div>
+  </div> 
 </body>
 </html>

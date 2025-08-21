@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Actividad Tinkercad</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="actividadtikercad">
+<div class="contenedor2">
+    <h1>ACTIVIDAD EN CLASE</h1>
+    <h2>ENCENDIDO DE UN LED</h2>
+    <br>
+    En esta clase se realizaron ejercicios para encender LEDs
+    El primer ejercicio consistió en encender un LED de manera directa, 
+    mientras que el segundo empleó una compuerta lógica AND para controlar el encendido de dos LEDs basado en señales de entrada. 
+    <br><br>
+  </br>
+  <div class="contenedor3">
+ 
+  <iframe width="725" height="453" src="https://www.tinkercad.com/embed/g8tND6qpoXQ?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+  </div>
+  <br><br>
+
+ <div class="contenedor2">
+    <h2>ENCENDIDO DE 4 LEDS</h2>
+    <div class="contenedor3">
+        <p>En la clase se estudio el control básico de 4 LEDs conectados a un Arduino UNO. 
+        Se programa el encendido y apagado secuencial de cada LED mediante comandos digitales específicos 
+        sin utilizar bucles, lo que permite entender el manejo básico de las salidas digitales y el control 
+        del tiempo de encendido mediante retardos. Esta práctica es clave para los fundamentos de la 
+        electrónica digital y la programación en microcontroladores.</p>
+    </div>    
+    <br><br>
+    <div class="fila-contenedores">
+    <div class="contenedor4">
+    <h3>OBJETIVOS</h3><br>
+    <strong>Objetivo General</strong>
+    <p>Encender y apagar secuencialmente 4 LEDs conectados a un Arduino</p>
+    <strong>Objetivos Específicos</strong>
+    <ul style="display: inline-block; text-align: left;">
+    <li>Conectar correctamente 4 LEDs y sus resistencias al Arduino.</li>      
+    <li>Configurar cada pin digital del Arduino como salida.</li>
+    <li>Programar el encendido y apagado secuencial con retardos para cada LED.</li>
+    </ul>
+    </div>
+    <br>
+    <div class="fila-contenedores">
+    <div class="contenedor4">
+    <h3>Materiales y Equipos</h3>
+    <ul style="display: inline-block; text-align: left;">
+        <li>Computadora con acceso a Tinkercad Circuits (para simulación)</li>
+        <li>Arduino UNO</li>
+        <li>4 LEDs de diferentes colores</li>
+        <li>4 resistencias</li>
+        <li>Protoboard</li>
+        <li>Cables</li>    
+    </ul>
+    </div>    
+    </div>
+    
+    <div class="contenedor3">
+        <h3>PROCEDIMIENTO</h3>
+        <ol style="display: inline-block; text-align: left;">
+            <li>Conectar el Arduino UNO a la protoboard.</li>
+            <li>Colocar 4 LEDs en la protoboard, conectando el ánodo de cada LED a los pines digitales 4, 5, 6 y 7 del Arduino mediante cables.</li>
+            <li>Conectar una resistencia en serie con cada LED para protegerlos.</li>
+            <li>Conectar el cátodo común de los LEDs a tierra (GND) del Arduino.</li>
+            <li>En el código, definir cada pin como salida en el setup().</li>
+            <li>En el loop(), encender y apagar cada LED secuencialmente con un retardo de 4000 ms (4 segundos) entre cada acción.</li>
+            <li>Verificar el correcto encendido y apagado en la simulación.</li>
+        </ol>
+    </div> 
+   
+    <div class="contenedor3">
+    <h2>Encender 4 leds con arduino</h2>
+    <iframe width="725" height="453" src="https://www.tinkercad.com/embed/5jFYLvaikCj?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+    </div>    
+
+    <div class="contenedor3">
+        <h3>RESULTADOS</h3>
+        <ul style="display: inline-block; text-align: left;">
+            <li>Los LEDs se encendieron y apagaron uno por uno en orden, permitiendo una observación clara de cada ciclo.</li>
+            <li>El retardo de 4 segundos fue suficiente para distinguir visualmente el encendido de cada LED antes de pasar al siguiente.</li>
+            <li>No se presentó ningún parpadeo extraño ni fallos en la secuencia, lo que indica una programación estable y correcta configuración del hardware.</li>
+            <li>La protección con resistencias en el cátodo funcionó eficazmente, evitando daños o excesos de corriente en los LEDs.</li>
+        </ul>
+    </div>
+    <br>
+
+    <div class="contenedor3">
+        <h3>ANÁLISIS Y DISCUSIÓN</h3>
+        <p>El control individual de cada LED mediante comandos específicos digitalWrite es una forma clara y simple para quienes están aprendiendo Arduino. 
+        No obstante, es código repetitivo, lo que limita su escalabilidad a proyectos con múltiples LEDs. 
+        Esta práctica ayuda a entender cómo funcionan las salidas digitales y los retardos para controlar dispositivos electrónicos, 
+        estableciendo las bases para introducir el uso de estructuras repetitivas como los bucles.</p>
+    </div>
+
+    <div class="contenedor3">
+        <h3>CONCLUSIONES</h3>
+        <ul style="display: inline-block; text-align: left;">
+        <li>Se aprendió el método básico de encender y apagar LEDs usando Arduino.</li>
+        <li>Es esencial proteger los LEDs con resistencias para evitar daños.</li>  
+        <li>La práctica refuerza el conocimiento sobre programación de salidas digitales y control temporal.</li>        
+        </ul>
+        <br><br>
+        <h3>APRENDIZAJE OBTENIDO</h3>
+        <br>
+        <ul style="display: inline-block; text-align: left;">
+        <li>Montaje básico de circuito con LEDs y Arduino.</li>
+        <li>Uso de funciones pinMode y digitalWrite para controlar LEDs.</li>
+        <li>Comprensión del uso de retardos para control de tiempo.</li>
+        </ul>
+    </div>   
+    <br>
+    <br>
+
+  <div class="fila-botones">
+  <a href="index.html" class="btn">Página Principal</a>
+  <br><br> 
+  <a href="Actividad1tinkercad.html" class="btn">Siguiente: Actividad 1: 7 leds utilizando el buble while y for</a>
+  </div>
+    
+ </div>
+</body>
+</html>

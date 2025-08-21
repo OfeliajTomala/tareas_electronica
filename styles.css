@@ -21,6 +21,7 @@ body {
   border-radius: 20px;
   max-width: 1200;
   width: 90%;
+  margin: auto;
 }
 /*Otros contenedores*/
 .contenedor2 {
@@ -49,6 +50,15 @@ body {
   border-radius: 20px;
   margin: auto;
 }
+.contenedor6 {
+  text-align: center;
+  background-color:rgba(30, 101, 104, 1);
+  max-width: 900px;
+  padding: 19px;
+  border-radius: 20px;
+  margin: auto;
+}
+
 /*Contenedor padre para objetivos y materiales*/
 .fila-contenedores {
   display: flex;           /* activa flexbox */
@@ -106,13 +116,23 @@ h3 {
   display: inline-block;
 }
 
-h4, h5 {
+h4 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;  
+}
+h5 {
   margin-top: 1em;
   margin-bottom: 0.5em;
+  text-align: center;
+
 }
 strong {
   color: #00c9ff;
 }
+p {
+  text-align: justify;
+}
+
 
 /* Estilos para tablas dentro del contenedor */
 table {
@@ -187,4 +207,13 @@ ol {
   margin: auto;                /* centra el contenedor horizontalmente */
   padding: 0 50px;             /* opcional: espacio interno horizontal */
   gap: 100px;  
+}
+/*Formulas*/
+.formula {
+          background-color: rgb(33, 159, 157);
+          padding: 10px;
+          border-left: 4px solid #00f;
+          margin: 10px 0;
+          font-family: monospace;
+          display: inline-block;
 }

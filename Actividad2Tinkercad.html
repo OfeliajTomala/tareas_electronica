@@ -5,23 +5,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Actividad Tinkercad</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    h2, h3, h4, h5 {
-        margin-top: 1em;
-        margin-bottom: 0.5em;
-    } 
-  </style>
 </head>
 <body class="actividadtikercad">
-
-  <div class="contenedor">
-    <h1>ACTIVIDAD TINKERCAD 2</h1>
+<div class="contenedor2">
+  <h1>ACTIVIDAD 2</h1>
+  <h2>Encender un led si la distancia es mayor a 100cm y encender una alarma si la distancia es menor a 100cm</h2>
+    <div class="contenedor3">
+        <p>Esta actividad consiste en la implementación de un sistema con Arduino que permite medir la distancia mediante un sensor ultrasónico 
+          HC-SR04 y, en función de dicha medida, controlar el encendido de un LED y la activación de una alarma piezoeléctrica. 
+          Si la distancia es mayor a 100 cm, se activa el LED, mientras que si es menor, se activa la alarma. </p>
+    </div>    
+    <br><br>
+    <div class="fila-contenedores">
+    <div class="contenedor4">
+    <h3>OBJETIVOS</h3><br>
+    <strong>Objetivo General</strong>
+    <p>Desarrollar un sistema electrónico que utilice un sensor ultrasónico para medir distancia y, mediante una función única, 
+      controlar el encendido de un LED y la activación de una alarma según la distancia detectada.</p>
+    <strong>Objetivos Específicos</strong>
+    <ul style="display: inline-block; text-align: left;">
+    <li>Conectar correctamente el sensor ultrasónico, LED y piezoeléctrico al Arduino.</li>      
+    <li>Programar la medición de distancia mediante el sensor HC-SR04.</li>
+    <li>Implementar una función que controle simultáneamente el encendido y apagado del LED y la alarma según la distancia medida.</li>
+    </ul>
+    </div>
+    <br>
+    <div class="fila-contenedores">
+    <div class="contenedor4">
+    <h3>Materiales y Equipos</h3>
+    <ul style="display: inline-block; text-align: left;">
+        <li>Computadora con acceso a Tinkercad Circuits (para simulación)</li>
+        <li>Arduino UNO</li>
+        <li>Sensor ultrasónico HC-SR04</li>
+        <li>LED</li>
+        <li>Resistencias</li>
+        <li>Protoboard</li>
+        <li>Piezoeléctrico (buzzer)</li>
+        <li>Cables</li>    
+    </ul>
+    </div>    
+    </div>
+    
+    <div class="contenedor3">
+        <h3>PROCEDIMIENTO</h3><br>
+        <ol style="display: inline-block; text-align: left;">
+        <li>Conectar el sensor ultrasónico: Trig al pin 9 y Echo al pin 10, conectar el LED al pin 2 con su resistencia y conectar el piezoeléctrico al pin 3</li>
+        <li>Establecer las conexiones de alimentación (5V y GND)</li>
+        <li>Declarar constantes para los pines utilizados y configurar pines como entradas o salidas en setup()</li>
+        <li>Implementar la función medirDistancia() para obtener lecturas del sensor</li>
+        <li>Crear la función controlarEncendido() que activa LED o piezo según la distancia</li>
+        <li>Establecer un umbral de 100 cm para cambiar entre los dos modos de alerta</li>
+        <li>Verificar el correcto funcionamiento del sistema mediante la simulación</li>      
+        </ol>
+    </div> 
+   
+    <div class="contenedor3">
     <h2>Utilizar una unica función para encender y apagar el led y la alarma</h2>
     Ejercicio: Encender un foco si la distancia es mayor a 100cm si es menor encender una alarma
     <br>
     <br>
     <iframe width="725" height="453" src="https://www.tinkercad.com/embed/4TvGmWlSyor?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+    </div>
+    <br>   
 
+    <div class="contenedor3">
+    <h3>RESULTADOS</h3>  
+    <table>
+        <tr>
+          <th>Distancia(cm)</th>
+          <th>LED</th>
+          <th>Piezo</th>
+          <th>Observaciones</th>
+        </tr>
+        <tr>
+          <td>150</td>
+          <td>Encendido</td>
+          <td>Apagado</td>
+          <td>Comportamiento esperado</td>
+        </tr>
+        <tr>
+          <td>105</td>
+          <td>Encendido</td>
+          <td>Apagado</td>
+          <td>Comportamiento esperado</td>
+        </tr>
+        <tr>
+          <td>80</td>
+          <td>Apagado</td>
+          <td>Encendido</td>
+          <td>Comportamiento esperado</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>Apagado</td>
+          <td>Encendido</td>
+          <td>Comportamiento esperado</td>
+        </tr>
+      </table>
+    
+    <ul style="display: inline-block; text-align: left;">
+      <li>El sistema demostró un funcionamiento confiable durante las pruebas realizadas.</li>
+      <li>A distancias mayores de 100 cm, el LED se mantuvo constantemente encendido mientras el piezoeléctrico permaneció inactivo, cumpliendo con el comportamiento esperado.</li>
+      <li>Cuando los objetos se acercaron por debajo del umbral de 100 cm, el sistema respondió inmediatamente apagando el LED y activando la alarma sonora del piezoeléctrico.</li>
+    </ul>
+
+    </div>
+
+    <div class="contenedor3">
+        <h3>ANÁLISIS Y DISCUSIÓN</h3>
+        <ul style="display: inline-block; text-align: left;">
+        <li>El sistema implementado demuestra eficazmente el principio de funcionamiento de los sensores ultrasónicos y su aplicación en sistemas de alarma.</li>
+        <li>El uso del puerto serial para mostrar las mediciones permite calibrar y verificar el correcto funcionamiento del sensor.</li>
+        <li>La implementación con delays de 500 ms proporciona un balance entre respuesta rápida y estabilidad en las lecturas, evitando activaciones erráticas por mediciones temporales.</li>
+        </ul>
+      </div><br>
+
+    <div class="contenedor3">
+      <h3>CONCLUSIONES</h3>
+      <ul style="display: inline-block; text-align: left;">
+        <li>Se implementó exitosamente un sistema de detección de proximidad con alertas visuales y sonoras</li>
+        <li>El sensor ultrasónico demostró ser efectivo para mediciones de distancia en diferentes rangos </li>
+        <li>La centralización de la lógica de control en una única función mejoró la claridad del código</li> 
+        <li>El sistema responde adecuadamente a cambios en la distancia, activando las alertas correspondientes</li>    
+      </ul>
+        <br><br>
+        
+        <h3>APRENDIZAJE OBTENIDO</h3>
+        <br>
+        <ul style="display: inline-block; text-align: left;">
+        <li>Principio de funcionamiento de sensores ultrasónicos y cálculo de distancias</li>
+        <li>Implementación de funciones modulares en programación Arduino</li>
+        <li>Uso del puerto serial para monitoreo y depuración</li>
+        <li>Control simultáneo de múltiples actuadores (LED y piezo)</li>
+        </ul>
+    </div>   
+    <br>
+    <br>
+  </div>  
+
+  <div class="fila-botones">
+  <a href="Actividad1Tinkercad.html" class="btn">Anterior: Actividad 1: 7 leds utilizando el buble while y for </a>
+  <br><br> 
+  <a href="Actividad3.html" class="btn">Siguiente: Actividad 3:LCD</a>
   </div>
+ 
+</div>
 </body>
 </html>

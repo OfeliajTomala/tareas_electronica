@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Actividad 3</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="actividadtikercad">
+ <div class="contenedor2">
+    <h1>ACTIVIDAD 3</h1> 
+    <h2>Calcular la distancia y mostrar en el lcd</h2>
+    <div class="contenedor3">
+        <p>En esta actividad se implementó un sistema de medición de distancia utilizando el sensor ultrasónico HC-SR04 conectado a un Arduino UNO, 
+            mostrando los resultados en una pantalla LCD 16x2. Además, se añadieron indicadores de alerta mediante un LED y un buzzer: el LED se activa 
+            cuando la distancia es mayor a 100 cm, mientras que el buzzer se enciende cuando la distancia es igual o menor a 100 cm.</p>
+    </div>    
+    <br><br>
+    <div class="fila-contenedores">
+    <div class="contenedor4">
+    <h3>OBJETIVOS</h3><br>
+    <strong>Objetivo General</strong>
+    <p>Diseñar y programar un sistema de medición de distancia con Arduino UNO que muestre los resultados en un display LCD y emita alertas visuales y sonoras según el rango de distancia detectado.</p>
+    <strong>Objetivos Específicos</strong>
+    <ul style="display: inline-block; text-align: left;">
+    <li>Conectar y programar el sensor ultrasónico HC-SR04 para calcular la distancia en centímetros.</li>      
+    <li>Mostrar en tiempo real los valores medidos en una pantalla LCD 16x2.</li>
+    <li>Implementar un sistema de alerta con LED y buzzer que indique si la distancia medida es mayor o menor a 100 cm.</li>
+    </div>
+    <br>
+    <div class="fila-contenedores">
+    <div class="contenedor4">
+    <h3>Materiales y Equipos</h3>
+    <ul style="display: inline-block; text-align: left;">
+        <li>Computadora con acceso a Tinkercad Circuits (para simulación)</li>
+        <li>Arduino UNO</li>
+        <li>Sensor ultrasónico HC-SR04.</li>
+        <li>Pantalla LCD 16x2.</li>
+        <li>Resistencia</li>
+        <li>Protoboard</li>
+        <li>Buzzer(alarma)</li>
+        <li>Led</li>
+        <li>Cables</li>    
+    </ul>
+    </div>    
+    </div>
+    
+    <div class="contenedor3">
+        <h3>PROCEDIMIENTO</h3>
+        <ol style="display: inline-block; text-align: left;">
+           <li>Se realizó la conexión del HC-SR04 al Arduino: pin Trigger al digital 8 y pin Echo al digital 9.</li>
+           <li>Se conectó la pantalla LCD al Arduino en modo de 4 bits (pines RS, E, D4-D7).</li>
+           <li>Se añadieron los dispositivos de salida: un LED (pin 10) y un buzzer (pin 11).</li>
+           <li>En el código, se implementó la función obtenerDistancia() para calcular la distancia a partir del tiempo de eco del sensor ultrasónico.</li>
+           <li>El valor de distancia se imprimió en la pantalla LCD, actualizándose cada 500 ms.</li>
+           <li>Se configuró la lógica de alertas:
+                <ul>
+                    <li>Si la distancia > 100 cm → LED encendido y buzzer apagado.</li>
+                    <li>Si la distancia ≤ 100 cm → LED apagado y buzzer encendido.</li>
+                </ul>
+           </li>
+           <li>Se cargó el código en el Arduino UNO y se probó el funcionamiento  a diferentes distancias.</li>
+        </ol>
+    </div> <br>
+   
+    <div class="contenedor3">
+    <h2>LCD</h2>
+    <p> Primera fila mostrar la palabra distancia, Segunda fila mostrar el valor de la distancia y concatenar cm, Si la distancia > 100 encender foco caso contrario encender una</p>
+    <iframe width="725" height="453" src="https://www.tinkercad.com/embed/5p6cOM0ucPL?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>    <br>   
+    </div><br>
+    <div class="contenedor3">
+        <h3>RESULTADOS</h3>
+        <p>El sistema mostró correctamente la distancia en la pantalla LCD, con valores en centímetros. Cuando el objeto se colocó a más de 100 cm, el LED permaneció encendido y el buzzer apagado. 
+            Cuando el objeto estuvo a menos de 100 cm, el LED se apagó y el buzzer emitió la alerta sonora.</p>   
+    </div>
+    <br>
+    <div class="contenedor3">
+        <h3>ANÁLISIS Y DISCUSIÓN</h3>
+        <p>La actividad permitió comprobar la eficacia del sensor ultrasónico HC-SR04 en la medición de distancias, 
+            con resultados estables y precisos dentro de un rango de 5 cm a 300 cm. La integración con la pantalla LCD facilitó la visualización en tiempo real. 
+            El retardo de 500 ms permitió lecturas estables sin sobrecargar el microcontrolador.
+        <p>
+          
+    </div><br>
+
+    <div class="contenedor3">
+        <h3>CONCLUSIONES</h3>
+        <ul style="display: inline-block; text-align: left;">
+           <li>Se logró implementar exitosamente un sistema de medición de distancia con Arduino, mostrando los datos en una pantalla LCD.</li>
+           <li>Se verificó el funcionamiento correcto del sensor ultrasónico HC-SR04 y su integración con el Arduino.</li>
+           <li>El sistema de alertas visuales y sonoras se activó de acuerdo con las condiciones establecidas (distancia mayor o menor a 100 cm).</li>
+        </ul>
+        <br><br>
+        
+        <h3>APRENDIZAJE OBTENIDO</h3>
+        <br>
+        <ul style="display: inline-block; text-align: left;">
+        <li>El funcionamiento y conexión del sensor ultrasónico HC-SR04.</li>
+        <li>Cómo calcular distancias a partir del tiempo de eco en microsegundos.</li>
+        <li>El uso del display LCD para mostrar datos en tiempo real.</li>
+        <li>La implementación de salidas de alerta (LED y buzzer) en proyectos de electrónica con Arduino.</li>
+        </ul>
+    </div>   
+    <br>
+    <br>
+  </div>  
+  <div class="fila-botones">
+  <a href="Actividad3.html" class="btn">Anterior: Actividad 3</a>
+  <br><br> 
+  <a href="ActividadLCDKEYPAD.html" class="btn">Siguiente: Actividad 5</a>
+  </div>
+    
+
+  </div> 
+</body>
+</html>

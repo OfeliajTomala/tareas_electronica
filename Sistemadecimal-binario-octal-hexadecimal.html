@@ -1,31 +1,322 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Circuito en serie y en paralelo</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    h2, h3, h4, h5 {
-        margin-top: 1em;
-        margin-bottom: 0.5em;
-    } 
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Representación de la información</title>
+    <link rel="stylesheet" href="styles.css" />    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 </head>
-<body class="circuitoenserieyparalelo">
+<body>
 
-  <div class="contenedor">
-    <h1>SISTEMAS NUMÉRICOS</h1>
-    <h2>Sistema decimal</h2>
-    <h2>Sistema binario</h2>
-    <h2>Sistema octal</h2>
-    <h2>Sistema hexadecimal</h2>
-    
-    
-<br>  
-<a href="Actividad1Tinkercad.html" class="btn">Siguiente: Activida en tikercad arduino</a>
+<div class="contenedor2">
 
+  <h1>REPRESENTACIÓN DE LA INFORMACIÓN</h1>
+  <div class="contenedor3"> 
+  <p>La Representación de la información es el proceso de codificar datos de manera que
+  puedan ser almacenados,procesados y transmitidos por un sistema informático.Esta
+  codificación implica convertir la información en un formato que las máquinas puedan
+  entender y manipular.</p>
+  </div>
+  <br><br>
+  <div class="contenedor3">
+    <h2>SISTEMAS DE REPRESENTACIÓN NUMÉRICA</h2>
+    <div class="fila-contenedores">
+      <div class="contenedor4">
+        <h2>Sistema decimal</h2>
+        <ul>
+          <li>El más utilizado en la vida cotidiana.</li>
+          <li>Emplea 10 dígitos: <br>
+            0, 1, 2, 3, 4, 5, 6, 7, 8, 9.</li>
+          <li>Es un sistema posicional: cada posición representa una potencia de base 10.</li>
+        </ul>
+        <b>Ejemplo:</b>
+        <br>
+        <p>\( 532 = 5 \times 10^2 + 3 \times 10^1 + 2 \times 10^0 \)</p>
+      </div>      
+
+      <div class="contenedor4">
+      <h2>Sistema binario</h2>
+      <ul>
+        <li>Fundamental en computación y electrónica digital.</li>
+        <li>Usa solo dos dígitos: 0 y 1.</li>
+        <li>Cada posición en un número binario representa una potencia de base 2.</li>
+      </ul>
+      <b>Ejemplo:</b>
+      <p>\( 1011 = 1\times2^3 + 0\times2^2 + 1\times2^1 + 1\times2^0 \)
+        \(= 11 \)</p>
+      </div>
+      
+      <div class="contenedor4">
+      <h2>Sistema octal</h2>
+      <ul>
+        <li>Utilizado en informática para simplificar la representación binaria.</li>
+        <li>Usa 8 dígitos: 0,1,2,3,4,5,6,7.</li>
+        <li>Cada posición en un número binario representa una potencia de base 8.</li>
+      </ul>
+      <b>Ejemplo:</b>
+      <p>\( 753= 7\times8^2 + 5\times8^1 + 3\times8^0  \)</p>
+      </div>
+      
+      <div class="contenedor4">
+      <h2>Sistema hexadecimal</h2>
+      <ul>
+        <li>Muy usado en programación y direcciones de memoria.</li>
+        <li>Dígitos del 0 al 9 y letras A, B, C, D, E, F.</li>
+        <li>Cada posición en un número binario representa una potencia de base 16.</li>
+      </ul>
+      <b>Ejemplo:</b>
+      <p> \( 2F = 2\times16^1 + 15\times16^0 \)</p>
+      </div>
+    </div>  
+  </div>
+  <br>
+
+  <div class="contenedor3">
+  <h2>CONVERSIONES</h2>
+  <div class="contenedor6">
+  <h3>De binario a decimal</h3>
+  <ol style="display: inline-block; text-align: left;">
+    <li>Multiplica cada bit por 2 elevado a la posición (empezando en 0 desde el bit menos significativo).</li>
+    <li>Suma todos los valores para obtener el número decimal.</li>
+  </ol>
+  </div><br>
+  <div class="contenedor6">
+  <h3>De binario a octal</h3>
+  <br>
+  <ol style="display: inline-block; text-align: left;">
+    <li>Agrupa los bits en grupos de 3 empezando desde la derecha.</li>
+    <li>Convierte cada grupo de 3 bits a su equivalente en octal.</li>
+    <li>Une los dígitos octales para obtener el número final.</li>
+  </ol>
+  </div><br>
+  <div class="contenedor6">
+  <h3>De binario a hexadecimal</h3>
+  <br>
+  <ol style="display: inline-block; text-align: left;">
+  <li>Agrupa los bits en grupos de 4 empezando desde la derecha.</li>
+  <li>Convierte cada grupo de 4 bits a su equivalente hexadecimal.</li>
+  <li>Une los dígitos hexadecimales para obtener el número final.</li>
+  </ol>
+  </div><br>
+  <div class="contenedor6">
+  <h3>De octal de binario</h3><br>
+  <ol style="display: inline-block; text-align: left;">
+  <li>Toma cada dígito octal.</li>
+  <li>Convierte cada dígito a su equivalente en binario de 3 bits (con ceros a la izquierda si es necesario).</li>
+  <li>Une todos los grupos binarios resultantes para tener el número en binario</li>
+  </ol>
+  </div><br>
+  <div class="contenedor6">
+  <h3>De octal a decimal</h3><br>
+  <ol style="display: inline-block; text-align: left;">
+  <li>Multiplica cada dígito del número octal por 8 elevado a la posición (empezando en 0 desde el dígito menos significativo).</li>
+  <li>Suma todos los valores obtenidos para obtener el número decimal.</li>
+  </ol>
+  </div><br>
+  <div class="contenedor6">
+  <h3>De hexadecimal a binario</h3><br>
+  <ol style="display: inline-block; text-align: left;">
+  <li>Convierte cada dígito hexadecimal a su equivalente binario de 4 bits.</li>
+  <li>Une todos los grupos binarios para obtener el número en binario.</li>
+  </ol>
+  </div><br>
+  <div class="contenedor6">
+  <h3>De hexadecimal a decimal</h3><br>
+  <ol style="display: inline-block; text-align: left;">
+  <li>Multiplica cada dígito hexadecimal por 16 elevado a la posición (empezando en 0 desde el dígito menos significativo).</li>
+  <li>Suma todos los valores para obtener el número decimal.</li>
+  </ol>
+  </div><br>
+  <div class="contenedor6">
+  <h3>De decimal a binario</h3><br>
+  <ol style="display: inline-block; text-align: left;">
+    <li>Divide el número decimal entre 2.</li>
+    <li>Guarda el residuo (0 o 1).</li>
+    <li>Divide el cociente nuevamente entre 2.</li>
+    <li>Repite hasta que el cociente sea 0.</li>
+    <li>El número binario será la lectura de los residuos de abajo hacia arriba.</li>
+  </ol>
+  </div><br>
+  <div class="contenedor6">
+  <h3>De decimal a octal</h3><br>
+  <ol style="display: inline-block; text-align: left;">
+    <li>Divide el número decimal entre 8.</li>
+    <li>Guarda el residuo.</li>
+    <li>Divide el cociente nuevamente entre 8.</li>
+    <li>Repite hasta que el cociente sea 0.</li>
+    <li>El número octal será la lectura de los residuos de abajo hacia arriba.</li>
+  </ol>
+  </div><br>
+  <div class="contenedor6">
+  <h3>De decimal a hexadecimal</h3><br>
+  <ol style="display: inline-block; text-align: left;">
+    <li>Divide el número decimal entre 16.</li>
+    <li>Guarda el residuo (0-15, usando A-F para 10-15).</li>
+    <li>Divide el cociente nuevamente entre 16.</li>
+    <li>Repite hasta que el cociente sea 0.</li>
+    <li>El número hexadecimal será la lectura de los residuos de abajo hacia arriba.</li>
+  </ol>
+  </div><br>
+
+  </div>
+  <br>
+  
+  <div class="contenedor3">
+  <h2>TABLAS</h2>
+  <div class="fila-contenedores">
+  <div class="contenedor4">
+  <table>
+    <tr>
+      <th>Binario</th>
+      <th>Octal</th>
+    </tr>
+    <tr>
+      <td>000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>001</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>010</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>011</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>110</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>111</td>
+      <td>7</td>
+    </tr>
+  </table>
+  </div>
+  <div class="contenedor4">
+  <table>
+    <tr>
+      <th>Binario</th>
+      <th>Hexadecimal</th>
+    </tr>
+    <tr>
+      <td>0000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0001</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0010</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>0011</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>0100</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>0101</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>0110</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>0111</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>1000</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>1001</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>1010</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>1011</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>1100</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>1101</td>
+      <td>D</td>
+    </tr>
+    <tr>
+      <td>1110</td>
+      <td>E</td>
+    </tr>
+    <tr>
+      <td>1111</td>
+      <td>F</td>
+    </tr>
+  </table>
+  </div>
+  </div>    
+  </div>
+  <br><br>
+
+  <div class="contenedor3">
+  <div class="contenedor5">
+  <h2>ACTIVIDAD 1</h2>
+  <div style="position: relative; width: 100%; height: 0; padding-top: 100.0000%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGwnqo8vBE/nYZT09c4pPzkeklh8YRJ8A/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
 </div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGwnqo8vBE&#x2F;nYZT09c4pPzkeklh8YRJ8A&#x2F;view?utm_content=DAGwnqo8vBE&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Diseño</a> de Ofelia Jessica Tomalá Tomalá
+ 
+  </div>
+  <br><br>
+  <div class="contenedor5">
+  <h2>ACTIVIDAD 2</h2>
+  <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGwnlbtk40/PhKnKM1bmggnl85aVtu4JQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGwnlbtk40&#x2F;PhKnKM1bmggnl85aVtu4JQ&#x2F;view?utm_content=DAGwnlbtk40&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Sistemas numericos.pdf</a> de Ofelia Jessica Tomalá Tomalá
+  </div>
+  </div>
 
+<br><br>
+<div class="fila-botones">
+<a href="Circuitoenserieyparalelo.html" class="btn">Anterior: Circuito en serie y paralelo</a>
+<br><br> 
+<a href="index.html" class="btn">Página Principal</a></div>
+<br>
+</div>
 </body>
 </html>

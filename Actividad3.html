@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Actividad 3</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="actividadtikercad">
+ <div class="contenedor2">
+    <h1>ACTIVIDAD 3: LCD</h1> 
+ 
+    <div class="contenedor3">
+        <p>En esta actividad se realizó la conexión y programación de una pantalla LCD de 16x2 a una placa Arduino UNO, 
+            con el fin de mostrar mensajes personalizados y símbolos gráficos creados por el usuario. 
+            Se utilizaron caracteres especiales definidos en memoria para representar una nota musical 
+            ,una carita sonriente,un corazón y una cruz los cuales fueron mostrados junto con un texto centrado en la pantalla.</p>
+    </div>    
+    <br><br>
+    <div class="fila-contenedores">
+    <div class="contenedor4">
+    <h3>OBJETIVOS</h3><br>
+    <strong>Objetivo General</strong>
+    <p>Implementar la conexión y programación de un display LCD de 16x2 en Arduino UNO para la visualización de texto y caracteres personalizados.</p>
+    <strong>Objetivos Específicos</strong>
+    <ul style="display: inline-block; text-align: left;">
+    <li>Identificar los pines necesarios para la comunicación entre el Arduino y la pantalla LCD.</li>      
+    <li>Programar el LCD para mostrar texto centrado en ambas filas.</li>
+    <li>Diseñar y cargar caracteres personalizados en la memoria del display.</li>
+    </ul>
+    </div>
+    <br>
+    <div class="fila-contenedores">
+    <div class="contenedor4">
+    <h3>Materiales y Equipos</h3>
+    <ul style="display: inline-block; text-align: left;">
+        <li>Computadora con acceso a Tinkercad Circuits (para simulación)</li>
+        <li>Arduino UNO</li>
+        <li>Pantalla LCD 16x2.</li>
+        <li>Resistencia</li>
+        <li>Protoboard</li>
+        <li>Cables</li>    
+    </ul>
+    </div>    
+    </div>
+    
+    <div class="contenedor3">
+        <h3>PROCEDIMIENTO</h3>
+        <ol style="display: inline-block; text-align: left;">
+           <li>Se realizó la conexión del display LCD con el Arduino UNO utilizando el modo de 4 bits (pines RS, E, D4, D5, D6, D7).</li>
+           <li>Se energizó la pantalla con VCC y GND, además de conectar el pin RW a tierra.</li>
+           <li>Se definieron cuatro caracteres personalizados en código (sonrisa, nota musical, corazón y cruz).</li>
+           <li>En el programa, se configuró el LCD para que en las esquinas se muestren los caracteres gráficos y, al centro, los nombres "Ofelia" y "Tomala".</li>
+           <li>Se cargó el código en el Arduino y se verificó en el protoboard el funcionamiento correcto de la pantalla.</li>
+           <li>Se realizo la simulación</li>
+        </ol>
+    </div> <br>
+   
+    <div class="contenedor3">
+    <h2>LCD</h2>
+    <p>En la primera fila escribir su nombre y centrar, En la segunda fila escribir su apellido y centrar, En las 4 esquinas escribir un carácter personalizado (diferente)</p>
+    <iframe width="725" height="453" src="https://www.tinkercad.com/embed/cX0NxFNKFMU?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>    </div>
+    <br>   
+
+    <div class="contenedor3">
+        <h3>RESULTADOS</h3>
+        <p>La pantalla LCD mostró correctamente los nombres centrados en cada línea. Además, en las esquinas se visualizaron los caracteres especiales diseñados:
+             una nota musical, una carita sonriente, un corazón y una cruz. 
+             El texto se mantuvo estable y legible durante la ejecución.</p>   
+    </div>
+    <br>
+    <div class="contenedor3">
+        <h3>ANÁLISIS Y DISCUSIÓN</h3>
+        <p>La actividad permitió comprobar el correcto funcionamiento de la comunicación entre el Arduino y el LCD en modo de 4 bits, optimizando el uso de pines digitales. 
+            La creación de caracteres personalizados permitió ampliar las capacidades de la pantalla, mostrando no solo texto sino también gráficos básicos. El uso de lcd.setCursor() 
+            facilitó el centrado dinámico del texto, mientras que lcd.createChar() permitió la personalización de los símbolos.
+        <p>
+          
+    </div><br>
+
+    <div class="contenedor3">
+        <h3>CONCLUSIONES</h3>
+        <ul style="display: inline-block; text-align: left;">
+           <li>La práctica permitió aprender a conectar y programar un LCD 16x2 con Arduino UNO.</li>
+           <li>Se logró mostrar texto centrado en ambas líneas de la pantalla.</li>
+           <li>Fue posible diseñar e implementar caracteres personalizados, mejorando la presentación visual.</li>
+           <li>Se demostró la versatilidad del LCD como medio de salida en proyectos de electrónica y programación.</li>
+        </ul>
+        <br><br>
+        
+        <h3>APRENDIZAJE OBTENIDO</h3>
+        <br>
+        <ul style="display: inline-block; text-align: left;">
+        <li>La forma de conectar un LCD en modo de 4 bits a un Arduino.</li>
+        <li>El uso de la librería LiquidCrystal para controlar la pantalla.</li>
+        <li>Cómo crear y mostrar caracteres personalizados en un display LCD.</li>
+        <li>La importancia de la planificación en la ubicación del texto y gráficos en proyectos de visualización.</li>
+        </ul>
+    </div>   
+    <br>
+    <br>
+  </div>  
+  <div class="fila-botones">
+  <a href="Actividad2Tinkercad.html" class="btn">Anterior: Actividad 2</a>
+  <br><br> 
+  <a href="Actividad4.html" class="btn">Siguiente: Actividad 4</a>
+  </div>
+    
+
+  </div> 
+</body>
+</html>
