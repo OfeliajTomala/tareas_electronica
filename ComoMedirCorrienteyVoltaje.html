@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Como medir corriente y voltaje</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+</head>
+<body>
+<div class="contenedor2">
+
+ <h1>¿COMO MEDIR CORRIENTE Y VOLTAJE DE UN CIRCUITO?</h1>
+   <div class="fila-contenedores">
+     <div class="contenedor4">    
+     <h2>Voltaje</h2>
+     <p>Es la diferencia de potencial eléctrico entre dos puntos. 
+     Se mide en Voltios (V). 
+     Se mide en paralelo al elemento. 
+     Multímetro en modo voltímetro (V). 
+     No abrir circuito. 
+     Revisar que esté en DC o AC según fuente.
+     </p>
+     </div>
+     <div class="contenedor4">
+     <h2>Corriente</h2>
+     <p>Es el flujo de electrones a través de un conductor. 
+      Se mide en Amperios (A). 
+      Se mide en serie con la rama del circuito. 
+      Multímetro en modo amperímetro (A). 
+      Se debe abrir el circuito para insertar el multímetro. 
+      Comenzar con la escala más alta para evitar daño.
+      </p>
+      </div>
+   </div>
+   <br><br>
+
+   <div class="contenedor3">
+     <h2>Cómo medir con multímetro </h2> 
+     <div class="fila-contenedores">
+        <div class="contenedor4">
+        <h3>Medir Voltaje</h3>
+        <br>    
+        <b>Conexión:</b> 
+        Multímetro en modo voltímetro (V), puntas en paralelo al componente o tramo a medir.
+        <p>Usa escala adecuada (DC o AC).</p>
+        <p>No interrumpas el circuito.</p>
+        </div>
+        <div class="contenedor4">
+        <h3>Medir Corriente</h3>
+        <br>
+        <b>Conexión:</b> 
+        Multímetro en modo amperímetro (A), puntas en serie con la rama del circuito.
+        <p>Debes abrir el circuito para insertar el multímetro.</p> 
+        <p>Empieza con la escala más alta para no quemar el fusible interno.</p>
+        </div>
+     </div>
+   </div> 
+   <br><br>
+
+   <div class="contenedor3">
+   <h2>¿COMO CALCULAR LA RESISTENCIA EQUIVALENTE?</h2>
+   <b>Resistencia:</b>
+   Oposición al flujo de corriente. Se mide en OHMIOS (Ω).
+   <b>Resistencia equivalente:</b> 
+   Es la resistencia total que puede reemplazar a varias resistencias.
+   <br><br>
+   <h3>Como calcular la resistencia equivalente </h3>
+   <div class="fila-contenedores">
+      <div class="contenedor4">
+      <h3>¿Circuito en serie?</h3>	
+      <p>La resistencia equivalente del circuito conectado en serie se encuentra sumando los valores de las resistencias individuales.</p>
+      <br>
+      \[ R_{eq} = R_1 + R_2 + \dots + R_n \]
+      </div>
+      <div class="contenedor4">
+      <h3>¿Circuito en paralelo?</h3>
+      <p>En un circuito en paralelo, la resistencia equivalente se calcula sumando los inversos y luego tomando el inverso del resultado:</p>
+      <br>
+      \[ \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n} \]
+      </div>
+   </div>  
+  <br>
+
+  <div class="contenedor5">
+    <h3>¿Qué hacer si es mixto?</h3>    
+    <p>Resolver paso a paso: primero combina series, luego paralelos, o viceversa.</p>
+   </div>
+        
+   </div>
+   <br></br> 
+   
+   <div class="fila-botones">
+   <a href="Compuertaslogicas.html" class="btn">Anterior: Compuertas lógicas</a>
+   <br><br>
+   <a href="Circuitoenserieyparalelo.html" class="btn">Siguiente: Circuito en serie o en paralelo</a>
+   </div>
+</div>
+</body>
+</html>
